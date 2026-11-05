@@ -1,0 +1,20 @@
+{
+  "title": "my_film",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "crossfade": 0.3,
+  "shots": [
+    { "file": "shots/s01.mp4", "start": 0, "duration": 4.0 },
+    { "file": "shots/s02.mp4", "duration": 4.0 },
+    { "file": "shots/s03.mp4", "duration": 5.0 }
+  ],
+  "voice": [
+    { "file": "voice/vo01.mp3", "start": 1.0 }
+  ],
+  "music": { "file": "music/theme.mp3", "volume": 0.35, "fade_out": 2.0 },
+  "sfx": [
+    { "file": "sfx/whoosh.mp3", "start": 3.7, "volume": 0.7 }
+  ],
+  "output": "exports/rough_cut.mp4"
+}

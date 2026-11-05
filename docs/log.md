@@ -167,3 +167,8 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Result: much closer. `stills/chars_v5_sunburst.png` chosen over the flare sheet; `room_v5.jpg` matches the sketch layout; `end_v5.jpg` has lamp, bear and cradle in one clean style with a lit-lamp glow. Awaiting team approval.
 - Cost: about 3,100 credits for four stills (45,770 to 48,884; counter lags). No video made yet, no sound.
 - Next after approval: one Fast 6 s clip from `room_v5` to `end_v5` (start and end frame), about 2,400 credits.
+
+### 20:20 · Direction change: hand-made look, not studio style
+- Team: "Forget the Disney style. Make it feel drawn by a man or a woman, original, not AI slop." Switched to a hand-drawn look based on the designer's own sketches. Two variants generated: A (gouache and pastel) and B (marker, crayon, torn paper, doodles). Both use the designer's sketches as references; prompts in `docs/prompts/hand_A.txt`, `hand_B.txt`. Documented in `docs/style_v3.md`.
+- The clean-cel images (`chars_v5`, `room_v5`, `end_v5`) are set aside. Balance 51480 of 610,000.
+- Awaiting the team's choice of A or B (or notes). Next: character sheet and room in the chosen look, then one Fast 6 s clip (start and end frame).

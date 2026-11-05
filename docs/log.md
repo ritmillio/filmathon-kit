@@ -142,3 +142,7 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - **Result (Fast model test):** much closer to the design (flat, in palette). Characters now act: the lamp hops, the cradle pops in, the bear drops onto the sill. Problems: the "door light" became a big amber slab, the cradle morphs messily when it first appears (about 2-3 s), the bear flops over mid-clip, the lamp grew thin spring legs. `shots/first6_fast.mp4`, cut `exports/first6_v2_continuous_fast.mp4` with the real sound mix.
 - **Credits:** counter 41,289 of 610,000 after two stills and one 6 s Fast clip (the counter lags; costs per item not measured).
 - **Open:** the team's "extended story line" message arrived with no file attached; waiting for the path.
+
+### 20:25 · Expanded storyboard received
+- Team file `expanded_storyboard.md` saved unchanged as `docs/storyboard_expanded.md`. `docs/storyboard_reconciliation.md` lists what it adds and nine conflicts with the older files. Biggest: the Bird (we use the Teddy Bear), camera moves (our rule is locked), the ending (click-and-darkness vs the loop), and Scene 1 (the Lamp waking in the dark, no cradle).
+- Nothing in `STORY.md`, the shot list or the sound plan was changed yet. Waiting for the team's decisions.

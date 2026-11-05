@@ -9,6 +9,7 @@ Read these first, in this order:
 @SOUND.md
 @docs/shotlist.md
 @docs/characters.md
+@docs/storyboard_reconciliation.md
 @docs/log.md
 
 ## Hard rules

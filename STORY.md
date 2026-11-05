@@ -2,6 +2,8 @@
 
 Working title. Competition theme: **Change**. Read this file with `DESIGN.md` (how it looks) and `SOUND.md` (how it sounds). If they disagree, this file wins on *what happens*, `DESIGN.md` wins on *how it looks*, `SOUND.md` wins on *how it sounds*.
 
+> **Extended storyboard received (team):** `docs/storyboard_expanded.md`. How it fits and the open conflicts (Bird vs Bear, camera moves, the ending): `docs/storyboard_reconciliation.md`. Until the team decides, this file stays the contract.
+
 ## One sentence
 
 One fixed room. No people. A whole life, from birth to death, told by the things in the room, which are alive. The person is never seen. They are felt through the door, the light, and how every object reacts. The film ends where it began: a new life.

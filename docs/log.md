@@ -172,3 +172,10 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Team: "Forget the Disney style. Make it feel drawn by a man or a woman, original, not AI slop." Switched to a hand-drawn look based on the designer's own sketches. Two variants generated: A (gouache and pastel) and B (marker, crayon, torn paper, doodles). Both use the designer's sketches as references; prompts in `docs/prompts/hand_A.txt`, `hand_B.txt`. Documented in `docs/style_v3.md`.
 - The clean-cel images (`chars_v5`, `room_v5`, `end_v5`) are set aside. Balance 51480 of 610,000.
 - Awaiting the team's choice of A or B (or notes). Next: character sheet and room in the chosen look, then one Fast 6 s clip (start and end frame).
+
+### 20:25 · Look B chosen; first 6 s made, silent
+- Team: "Now we are getting it. Let's go with hand B... Do not put any sound under it." **Look B** (marker, crayon, torn paper) is the film's look. No sound on this cut or any test until the team does the sound.
+- Start frame `stills/hand_B_empty.jpg` (edited from `hand_B`, same room, cold and empty, one still about 780 credits). End frame `stills/hand_B.jpg`.
+- One continuous Veo 3.1 **Fast** clip, 6 s, start and end frame, no audio (`shots/first6_B_fast.mp4`, prompt `docs/prompts/clip_B_first6.txt`). Cut on twos (12 to 24 fps), 1920x1080, silent: `exports/first6_B_silent.mp4`.
+- Result (checked from 8 frames, not yet watched in real time by the assistant): continuous, no cut; moonlight shimmers; an orange bar of door light slides in; the cradle tumbles in and settles; the bear appears on the sill; the lamp pops in on a springy coil, blinks, smiles and lights up with a yellow crayon glow. Crayon grain re-draws each frame. **Flaws:** the cradle first arrives tilted and fast; at the very end the bear tips forward on the sill; the lamp's legs are a coil (design drift from the sketch).
+- Cost: balance 55549 of 610,000 used (about 3,200 for the empty still and the Fast clip, counter lags).

@@ -108,3 +108,7 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - **Cost:** about 4,250 credits after the still and the first clip (0.7% of 610,000). Shot 2 still and clip not yet measured.
 - Cut file: `exports/first6_ai_silent.mp4` (3 s + 3 s, hard cut, no sound yet). `scripts/el_gen.py` is the generation client.
 - **Audio references** (four Disney tracks) saved locally in `assets/references/audio/` (not committed).
+
+### ~21:05 · Free 60 s animatic (no credits)
+- Team plan: lock timing first without credits, then spend ElevenLabs credits on the final shots. (Clarified: the rule is ElevenLabs-only, not "spend all 600K".)
+- `preview/animatic.py` builds `exports/animatic_60s_placeholder.mp4`: 15 shot cards (from `docs/shotlist.md`) over the base room, with the 84-cue placeholder sound mix (beeps and noise, not real sound). Exactly 60.000 s. **Timing only; never in the final film.** Verified: duration, one frame checked. Not watched in real time.

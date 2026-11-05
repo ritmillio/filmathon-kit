@@ -160,3 +160,10 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Results (silent, stills only): `stills/chars_v4.png` (Lamp, Bear, Mug), `stills/room_v4.jpg` (empty room on the sketch layout, curtains added), `stills/end_v4.jpg` (room with lamp, bear, cradle, warm light from the right). Much closer to the references. **Awaiting team approval.**
 - Cost: character sheet about 920, room 2K about 520, end frame about 500. Balance 45770 of 610,000 used.
 - Next (after approval): one Fast 6 s clip from `room_v4` to `end_v4` (start and end frame), then standard only if it passes. No sound.
+
+### 20:17 · Clean-cel look found (v5); painterly v4 rejected
+- Team feedback with two screenshots of the references: v4 was "really far from the Disney style". Re-analysed: the references are clean graphic cel animation (bold even outline, flat saturated fills, one hard shadow tone, white-oval eyes with pupils, big mouths, mitten hands), not painterly or textured.
+- Rewrote the prompts accordingly (`docs/prompts/chars_v5.txt`, `room_v5.txt`, `end_v5.txt`) and generated with `gpt-image-2.5-sunburst` and `-flare` via ElevenLabs. Held the line of **not uploading the team's reference images** to the generator.
+- Result: much closer. `stills/chars_v5_sunburst.png` chosen over the flare sheet; `room_v5.jpg` matches the sketch layout; `end_v5.jpg` has lamp, bear and cradle in one clean style with a lit-lamp glow. Awaiting team approval.
+- Cost: about 3,100 credits for four stills (45,770 to 48,884; counter lags). No video made yet, no sound.
+- Next after approval: one Fast 6 s clip from `room_v5` to `end_v5` (start and end frame), about 2,400 credits.

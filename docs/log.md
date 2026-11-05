@@ -296,3 +296,6 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Team: everything perfect; only fix the bear's arm length in the last scene's reach toward the lamp (it stretched to about three times its length). Regenerated only the ending's second clip (`s7_v7_b`, prompt `docs/prompts/s7_v7_b_clip.txt` with an explicit short-stubby-arm rule; start `stills/s7_v6_E.jpg`, end `stills/s7_v6_dark.jpg`). Checked at full size: the arm is a normal short forearm raised from the elbow; the rest of the film is unchanged.
 - `scripts/make_film.py` now uses `s7_v7_b`. Final `exports/final/teamname_lifetimeinonelittleroom.mp4` rebuilt (60.5 s, 1920x1080, 24 fps, H.264 + AAC, pure-black chalk title card, the team's music).
 - Balance: $N credits.
+
+### 22:39 · FINAL v7: title card "a lifetime in one little room"
+- Team asked whether "a lifetime" or "lifetime" makes sense; recommendation "a lifetime in one little room" (natural English). New black chalk card generated with `gpt-image-2.5-sunburst` via ElevenLabs (`docs/prompts/title_card_a.txt`, `stills/title_card_a_black.jpg`, spelling checked, pure black background). Final: `exports/final/teamname_alifetimeinonelittleroom.mp4` (60.5 s, 1920x1080, 24 fps, H.264 + AAC; film v6 + card + the team's music). The older `teamname_lifetimeinonelittleroom.mp4` stays in the same folder.

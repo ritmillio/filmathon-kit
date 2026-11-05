@@ -18,6 +18,8 @@ Read with `STORY.md` (what happens) and `SOUND.md` (how it sounds). The visual r
 
 `preview/first6.mp4` was rendered with code. It is an animatic for timing and mood only. **It must not appear in the final film.**
 
+> **SUPERSEDED (2026-11-05, team decision): the look is now `docs/style_v3.md`** (feature-animation craft from the Figma references). The Style DNA, palette-only rule and prompt prefix below describe the older flat "Night Plate" and stay only as history. Layout, the locked room, items and gates still apply.
+
 ## Style DNA
 
 - **Flat cel colour.** One fill per shape, almost no shading.

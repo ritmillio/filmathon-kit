@@ -2,6 +2,8 @@
 
 Read with `STORY.md` (timings, stage IDs S1-S8) and `DESIGN.md`. The full second-by-second list is in `audio/sound_cues.csv`; the mixer is `audio/mix_audio.py`. **If a timing in `STORY.md` changes, update the matching rows in `sound_cues.csv` and rebuild.**
 
+> **PAUSED (team, 2026-11-05):** do not generate or mix sound now. The team will do sound later, with the reference tracks in `assets/references/audio/`. Films and tests are silent until then. What exists in `audio/` (31 effects, a music take, `audio/music_plan.json`, the cue sheet) is a first draft, not approved.
+
 ## The idea
 
 One pulse runs under everything: **60 beats per minute, one beat a second**, like a resting heart. The opening heartbeat, the music and the clock all keep it. At the end the old heart stops (56.2 s), there is **one second of true silence**, and a new heartbeat starts at **120 bpm** (a newborn). The music's very first note returns at 58 s. Sound and picture say the same thing: one life ends and the next begins.

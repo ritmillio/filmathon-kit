@@ -146,3 +146,10 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 ### 20:25 · Expanded storyboard received
 - Team file `expanded_storyboard.md` saved unchanged as `docs/storyboard_expanded.md`. `docs/storyboard_reconciliation.md` lists what it adds and nine conflicts with the older files. Biggest: the Bird (we use the Teddy Bear), camera moves (our rule is locked), the ending (click-and-darkness vs the loop), and Scene 1 (the Lamp waking in the dark, no cradle).
 - Nothing in `STORY.md`, the shot list or the sound plan was changed yet. Waiting for the team's decisions.
+
+### 20:40 · Style v3 (Disney-craft) replaces the flat look; sound paused
+- Team feedback: sound is garbage and the reference tracks were not used; characters too close to the sketches; the look must follow the Figma references (feature-animation craft, "somewhat realistic but fluid"). **Sound is paused**: silent tests only; the team will do sound later (the assistant cannot listen to audio and only measured loudness of the reference tracks).
+- Processed `room design figma.svg` (6 images, no scripts or links) and re-checked the character board. Findings in `docs/style_v3.md`: faces with eyebrows and open mouths, real arms and feet, appealing rounded shapes, varied-weight dark-brown ink, soft two-tone shading, rich painterly rooms with texture and one strong warm light. These replace "flat cel, almost no shading".
+- Team: sketches are only for what each character is; redesign freely with the craft elements. Test sheet `stills/chars_v3.png` (Lamp, Bear, Mug), one 1K still, 3,045 credits (41,289 -> 44,334). Reads as the sketch idea with much more appeal. Not yet approved by the team.
+- `DESIGN.md` Style DNA and `SOUND.md` marked superseded and paused with pointers. Credit costs measured: still about 3,000; Fast 6 s about 2,400; standard 4 s about 4,800.
+- Open: team approval of the character look (button eyes on the Bear or soulful eyes?), curtains on the window (the references frame the window with cloth).

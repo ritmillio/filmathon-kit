@@ -121,3 +121,8 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Mix: `mix_real.wav`, 84 cues, 60.000 s, silence at 56.5-57.2 s is digital silence. Video: `exports/animatic_60s_real_sound.mp4` (cards + real sound).
 - Credits: balance 18,855 -> 19,825 after two music takes, the note and 32 effects. This is much cheaper than planned, but the counter may lag. Re-check.
 - Open: first listen by the team; per-effect retakes; add accents on each pop (cue sheet); try video-to-music on real clips.
+
+### ~21:45 · Team character notes split into per-character files
+- The team sent `karakterek.md` (Hungarian: Lamp, Bear, Mug). Kept unchanged as `docs/characters/_source_karakterek_hu.md`. Created one English file per character in `docs/characters/` with an index and the team's five headings; added the gaps (a life-long arc for each, shots, prompt blocks, sound and a musical voice per character) and the characters the notes did not cover (Cushion, Armchair, Side Table, Bed, Door and Window). *(added)* parts are proposals.
+- **New facts from the team that change earlier assumptions:** the Lamp hops on one leg and walks around (earlier: stationary, "heart of the room"); the Bear climbs and sits on the armchair (earlier: carried only, the armchair appears at 28 s); the Mug grooves constantly with coffee sloshing (earlier: a quiet side-table presence).
+- **Not yet applied:** `STORY.md`, `docs/shotlist.md` and the music plan still use the earlier behaviour. Four open decisions are listed in `docs/characters/README.md`. Change the story files only after the team answers.

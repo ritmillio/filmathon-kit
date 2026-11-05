@@ -1,5 +1,7 @@
 # Characters: the continuity bible
 
+> **Per-character files now live in `docs/characters/`** (`README.md` is the index). They add the team's own notes (Lamp, Bear, Mug) and the gaps. Where they disagree with this overview, the per-character file wins and the difference is flagged under "Conflicts" there. The Lamp and the Bear now **move** (hop, climb); the line below that says "no arms, mostly passive" refers to limbs, not to motion.
+
 **Draft compiled by the assistant from `STORY.md`, `DESIGN.md`, `assets/items.md` and the designer's sketches. The team approves it.**
 How to use it: paste each character's **prompt block** word for word into every still or clip prompt where that character appears, and attach its reference image. Same words every time is what keeps a character consistent across 15 shots.
 

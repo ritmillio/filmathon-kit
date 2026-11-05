@@ -8,8 +8,8 @@ scenes=[ (['exports/s01_v4_silent.mp4'],['exports/s01_v3_silent.mp4']),
          (['exports/s03_v4_silent.mp4'],['exports/s03_v3_blue_silent.mp4']),
          (['exports/s04_v4_silent.mp4'],['exports/s04_v2_silent.mp4']),
          (['exports/s05_v2_silent.mp4'],['exports/s05_v2_silent.mp4']),
-         (['exports/s06_v5_silent.mp4'],['exports/s06_v4_silent.mp4']),
-         (['exports/s7_v4_a_silent.mp4','exports/s7_v4_b_silent.mp4'],['exports/s78_v3_a_silent.mp4','exports/s78_v3_b_silent.mp4'])]
+         (['exports/s06_v6_silent.mp4'],['exports/s06_v4_silent.mp4']),
+         (['exports/s7_v6_a_silent.mp4','exports/s7_v6_b_silent.mp4'],['exports/s78_v3_a_silent.mp4','exports/s78_v3_b_silent.mp4'])]
 def dur(f): return float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',f]))
 chosen=[]
 for new,old in scenes:

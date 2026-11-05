@@ -286,3 +286,8 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 ### 22:20 · Title card pure black; slim-bear redo started
 - Title card background crushed to pure black (smoothstep levels on `stills/title_card.png`, chalk unchanged) -> `stills/title_card_black.jpg`; final `exports/final/teamname_lifetimeinonelittleroom.mp4` rebuilt (60.5 s, music kept).
 - Team: the old bear in stages 6-7 is "still fat". Two best-effort subagents started ~22:20 to redo stage 6 (`s06_v6`) and the ending (`s7_v6`) with a slim old bear (thin limbs, small belly, same head). Swap in only if they finish in time; the current final stays valid.
+
+### 22:28 · FINAL v5: slim old bear in stages 6 and 7
+- Team: the old bear in the last scenes is "still fat". Redone with a slim old bear (thin limbs, small belly, same head, patches and stitched seam): stage 6 `s06_v6` (rises from the armchair, walks past the bed, climbs to the sill) and the ending `s7_v6_a/b` (climbs onto the bed, one arm toward the lamp, falls asleep, lamp out, fade). Frames checked: the bear stays small and slim; the end frame E of the ending still reads close to v4 (only head and one arm visible under the blanket).
+- `scripts/make_film.py` now points to the v6 clips. `exports/film_v5_silent.mp4` (57.0 s) -> final `exports/final/teamname_lifetimeinonelittleroom.mp4` (60.5 s: film + pure-black chalk title card + the team's music, 1920x1080, 24 fps, H.264 + AAC).
+- Balance: $N credits.

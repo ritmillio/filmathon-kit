@@ -1,0 +1,10 @@
+# Team revision brief v3 (pasted by the team, 2026-11-05 ~21:20)
+
+Second revision, on top of the v2 film (`exports/film_v2_silent.mp4`). Keep the soft hand-made look, the characters and the atmosphere; change only what is listed.
+- **Scene 1:** nothing may fall or drop into the room (the team wrote "coffee pot"; there is no pot in the scene, so this is read as the bear's flailing drop). The bear climbs down from the window in one continuous, visible movement, approaches the crib, leans forward and looks inside it (gaze clearly into the crib), curious and attentive.
+- **Scene 2:** the ball rolls naturally out of the room through the open doorway, farther and farther until it is gone, and never reappears (not in the middle of the room at the end). The bear must not wink; both eyes stay normal.
+- **Scene 3:** keep as is; change the lamp's tears to a soft, slightly muted blue; keep their shape, movement and expression. No other change.
+- **Scene 4 and Scene 5:** perfect; unchanged, exactly as they are.
+- **Scene 6:** the falling leaves stay outside, behind the window glass, never inside the room; the old worn bear in the armchair is fully visible (not hidden behind the armchair), clearly aged (patches, faded, soft edges, sagging tired posture); it climbs out of the armchair slowly and with effort (old age: slow, stiff, pauses, careful weight shifts, slightly unsteady).
+- **Last two scenes:** combine into one longer continuous sequence about the bear's final stage of old age: deep tiredness, fragility, slow deliberate movements with pauses, a gentle quiet reflective expression, no exaggerated sadness; it pauses and takes in its surroundings; the sequence is a natural culmination of the bear's life, contrasting the young playful bear of the beginning with the fragile old bear. Keep the palette, linework and textures.
+- **Production:** every action has a beginning, middle and end; no sudden repositioning, no unexplained appearances or disappearances; scenes marked complete stay unchanged.

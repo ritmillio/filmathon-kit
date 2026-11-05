@@ -220,3 +220,7 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - **Known flaws:** lamp pole bends or tilts in jumps and shakes (S2, S3, S4, S7), S1 the door swings wider than the end frame and the bear flails, S3 the door opens wider before the slam and two small drips fall at the end, S2 the lamp top is cut off at the frame edge for a moment.
 - Joined: `exports/film_v2_silent.mp4`, 1920x1080, 24 fps, 52.000 s, silent. Old film kept: `exports/film_B_all8_silent.mp4`.
 - Balance $N of 610,000 (counter lags).
+
+### 21:23 · Revision brief v3 received (second revision)
+- Saved as `docs/revision_brief_v3.md`; specs in `docs/stage_specs_v3.md`. Stages 4 and 5 unchanged; Stage 3 only gets blue tears (recolour in editing); redo Stage 1 (bear climbs down and looks into the crib), Stage 2 (ball rolls out of the open door and does not return, no wink), Stage 6 (leaves outside only, old bear fully visible climbs out of the armchair slowly); combine the last two stages into one 16 s ending about the old bear (two 8 s clips sharing one frame). New total 60 s.
+- Note: the brief mentions a "coffee pot" falling in Scene 1; there is none, so it was read as the bear's flailing drop in the v2 clip.

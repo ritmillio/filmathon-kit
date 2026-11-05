@@ -122,6 +122,16 @@ python3 audio/mix_audio.py --cues audio/sound_cues.csv --audio-dir audio --out m
 
 Produces a 60.000-second stereo file. Tested with placeholder tones: 84 cues, exactly 60.000 s, short files looped correctly, and the silence at 56.5-57.2 s measured as digital silence (-91 dB). Real files will differ, so listen. Cues near a silence have an explicit length so a long file cannot leak into it. Then mux `mix.wav` into the film with ffmpeg or lay it under the video in CapCut.
 
+## Score approach v2 (real generation, 2026-11-05 ~21:30)
+
+The first mix used beeps (placeholders). Replaced with real ElevenLabs sound:
+- **Music:** `music_v2_5` driven by a **composition plan** (`audio/music_plan.json`, made with `scripts/el_music.py`): one chunk per story stage with exact durations (6, 8, 8, 6, 10, 8, 8, 6 s), the same four-note lullaby theme in every chunk, a warm storybook chamber orchestra (music box, celesta, harp, piano, pizzicato, clarinet, flute, soft horn, cello), no vocals or drums. **Plan format for v2.5 is `chunks` (text, duration_ms, positive_styles, negative_styles, context_adherence), not the v1 `sections` format.** The plan call (`/v1/music/plan`) is free.
+- **Takes:** take 1 kept (quiet start, fade to silence, correct arc except S5 is not the loudest). Take 2 (seed 7, louder S5 and quieter S4 in the text) was worse: S4 was the loudest part. Prompt text does not control loudness reliably; the cue sheet does.
+- **Final note:** the score fades to silence, so the last music-box note is generated separately (`music_note_first.wav`, SFX v3) and placed at 58.0 s.
+- **Effects:** all 31 SOUND.md effects generated once with SFX v3 (`scripts/el_sfx.py`, `prompt_influence` 0.5, loops where the prompt says seamless loop). One take each; not yet listened to by anyone.
+- **Craft from the reference tracks (measured, own words):** the favourite title opens very quiet and warm-dark and grows about 7 dB, which matches our story. Classic scores also hit the picture on every small action (stings, plucks, glissandos on each pop). We do that with the cue sheet: add a short plucked or glissando accent beside each hero pop and each object entrance.
+- **Not yet used:** `/v1/music/video-to-music` (scores a video, can add synced effects, can return separate music and effects tracks). Best tried once the AI clips exist.
+
 ## Using the ElevenLabs MCP
 
 1. Connect the MCP (see the project notes) and run `/mcp` to see the real tool list.

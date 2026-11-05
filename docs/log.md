@@ -112,3 +112,12 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 ### ~21:05 · Free 60 s animatic (no credits)
 - Team plan: lock timing first without credits, then spend ElevenLabs credits on the final shots. (Clarified: the rule is ElevenLabs-only, not "spend all 600K".)
 - `preview/animatic.py` builds `exports/animatic_60s_placeholder.mp4`: 15 shot cards (from `docs/shotlist.md`) over the base room, with the 84-cue placeholder sound mix (beeps and noise, not real sound). Exactly 60.000 s. **Timing only; never in the final film.** Verified: duration, one frame checked. Not watched in real time.
+
+### ~21:30 · Real sound generated (replaces placeholder beeps)
+- Team feedback: placeholder sound is garbage; build it like classic hand-drawn animated-feature scores.
+- Measured the four reference tracks (loudness, brightness, dynamics; the tempo estimate was unreliable and is ignored). The favourite (A04) is the darkest and opens quietest, then grows. No audio was listened to by the assistant.
+- Music: `music_v2_5` with a stage-by-stage composition plan (`audio/music_plan.json`, `scripts/el_music.py`). Take 1 kept, take 2 rejected (flat arc). Final note generated separately.
+- Effects: 31 files via SFX v3 (`scripts/el_sfx.py`), one take each. **Not yet listened to by a person.**
+- Mix: `mix_real.wav`, 84 cues, 60.000 s, silence at 56.5-57.2 s is digital silence. Video: `exports/animatic_60s_real_sound.mp4` (cards + real sound).
+- Credits: balance 18,855 -> 19,825 after two music takes, the note and 32 effects. This is much cheaper than planned, but the counter may lag. Re-check.
+- Open: first listen by the team; per-effect retakes; add accents on each pop (cue sheet); try video-to-music on real clips.

@@ -1,0 +1,246 @@
+{
+ "chunks": [
+  {
+   "text": "[S1 Birth]",
+   "duration_ms": 6000,
+   "positive_styles": [
+    "60 BPM",
+    "instrumental",
+    "four-note lullaby theme in C major",
+    "warm intimate storybook chamber orchestra",
+    "almost silent hush",
+    "a single music box note enters near the end of the section",
+    "tiny sparkling celesta",
+    "sleepy and wondering"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "electronic",
+    "synthesizer",
+    "drum kit",
+    "heavy percussion",
+    "epic trailer",
+    "dubstep",
+    "modern pop",
+    "choir",
+    "full orchestra",
+    "loud"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S2 Childhood]",
+   "duration_ms": 8000,
+   "positive_styles": [
+    "60 BPM",
+    "instrumental",
+    "four-note lullaby theme in C major",
+    "warm intimate storybook chamber orchestra",
+    "the lullaby theme played playfully",
+    "light pizzicato strings and tiptoeing woodwinds",
+    "bouncy small waltz feel, curious and sweet",
+    "harp glissandos"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "electronic",
+    "synthesizer",
+    "drum kit",
+    "heavy percussion",
+    "epic trailer",
+    "dubstep",
+    "modern pop",
+    "choir",
+    "drums",
+    "loud brass"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S3 Teens]",
+   "duration_ms": 8000,
+   "positive_styles": [
+    "60 BPM",
+    "instrumental",
+    "four-note lullaby theme in C major",
+    "warm intimate storybook chamber orchestra",
+    "the lullaby theme turned moody and slightly sulky",
+    "muted solo clarinet and low plucked cello",
+    "syncopated, restless, a little grumpy but gentle",
+    "minor colours"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "electronic",
+    "synthesizer",
+    "drum kit",
+    "heavy percussion",
+    "epic trailer",
+    "dubstep",
+    "modern pop",
+    "choir",
+    "electric guitar",
+    "rock drums"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S4 Away]",
+   "duration_ms": 6000,
+   "positive_styles": [
+    "60 BPM",
+    "instrumental",
+    "extremely quiet",
+    "a single low piano note every few seconds",
+    "a barely audible held string",
+    "mostly silence",
+    "cold and lonely"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "electronic",
+    "synthesizer",
+    "drum kit",
+    "heavy percussion",
+    "epic trailer",
+    "dubstep",
+    "modern pop",
+    "choir",
+    "melody",
+    "full orchestra",
+    "melody",
+    "strings swell",
+    "any rhythm"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S5 Family]",
+   "duration_ms": 10000,
+   "positive_styles": [
+    "60 BPM",
+    "instrumental",
+    "the loudest and fullest moment of the whole piece",
+    "the lullaby theme in warm major",
+    "full storybook orchestra: strings, harp, flute, warm horn, glockenspiel",
+    "swelling, radiant, joyful"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "electronic",
+    "synthesizer",
+    "drum kit",
+    "heavy percussion",
+    "epic trailer",
+    "dubstep",
+    "modern pop",
+    "choir",
+    "drums",
+    "bombastic"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S6 Quiet years]",
+   "duration_ms": 8000,
+   "positive_styles": [
+    "60 BPM",
+    "instrumental",
+    "four-note lullaby theme in C major",
+    "warm intimate storybook chamber orchestra",
+    "the lullaby theme relaxed and slower",
+    "solo piano with soft strings and clarinet",
+    "autumn contentment, gentle rubato"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "electronic",
+    "synthesizer",
+    "drum kit",
+    "heavy percussion",
+    "epic trailer",
+    "dubstep",
+    "modern pop",
+    "choir",
+    "drums",
+    "loud"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S7 Old age]",
+   "duration_ms": 8000,
+   "positive_styles": [
+    "60 BPM",
+    "instrumental",
+    "four-note lullaby theme in C major",
+    "warm intimate storybook chamber orchestra",
+    "the lullaby theme very slow and low",
+    "a trembling solo piano and thin quiet strings with long gaps",
+    "fragile, tender, fading"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "electronic",
+    "synthesizer",
+    "drum kit",
+    "heavy percussion",
+    "epic trailer",
+    "dubstep",
+    "modern pop",
+    "choir",
+    "loud",
+    "full orchestra"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S8 End and beginning]",
+   "duration_ms": 6000,
+   "positive_styles": [
+    "60 BPM",
+    "instrumental",
+    "fades completely to silence by the third second",
+    "then total silence"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "electronic",
+    "synthesizer",
+    "drum kit",
+    "heavy percussion",
+    "epic trailer",
+    "dubstep",
+    "modern pop",
+    "choir",
+    "full orchestra",
+    "crescendo"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  }
+ ]
+}

@@ -81,5 +81,5 @@ time_s,file,gain_db,fade_in_s,fade_out_s,dur_s,src_start_s,note
 57.3,door_open.wav,-8,0,0,,,New light from the door after one second of silence
 57.4,room_tone.wav,-32,0.5,0.5,2.6,,Room tone returns with the new light
 57.8,heart_fast.wav,-10,0.1,0.4,2.2,,"Newborn heartbeat, double speed. The loop."
-58.0,music.wav,-12,0.05,1.2,2.0,4.1,The first note again. Set src_start to the first note of your take.
+58.0,music_note_first.wav,-12,0.05,1.2,2.0,,The first note again (own generated note)
 58.4,baby_cry.wav,-6,0,0.4,1.6,,A new cry. Fades at 60.0.

@@ -31,7 +31,7 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Updated `DESIGN.md`, `SOUND.md` and `audio/sound_cues.csv`. New effect `plush_plop.wav` (31 effects in total).
 
 ### ~19:13 · RULES CORRECTION (important)
-- Read the official kit (`README.md`, `docs/`). **Visuals must be 100% AI-generated, and image, video, audio and music must come only from the ElevenLabs Pro package** to be prize-eligible. Higgsfield and other generators are allowed but out of contest.
+- Read the official kit (`README.md`, `docs/`). **Visuals must be 100% AI-generated, and image, video, audio and music must come only from the ElevenLabs Pro package** to be prize-eligible. Team rule: ElevenLabs is the only generation tool.
 - `DESIGN.md` previously said the brief rules out AI video. **That was wrong** (it was copied from the style board). Corrected.
 - Consequence: the sketch-to-image-to-video pipeline is right, and the code-rendered approach is only an animatic.
 - Consequence: the room cannot be locked pixel-exactly. The sketch overlay check (`scripts/overlay_check.py`) and cutting between room states replace the earlier code-based lock.
@@ -53,9 +53,23 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - A bug in `scripts/save.sh` made the first run exit silently without committing (a size check returned a false status under `set -e`). Fixed, then pushed.
 - From now on: `scripts/save.sh "message"` after every meaningful change, plus a dated entry in this log.
 
+### ~19:45 · Assets folder, the designer's item sketches, and the Figma reference structure
+- Added `assets/items/` (seven item sketches, cropped square on white), `assets/sketches/items_original/`, `assets/sketches/contact_sheet.png`, the registry `assets/items.md`, and `assets/README.md`.
+- The sketches add things the story did not have. Updated `STORY.md`, `DESIGN.md`, `docs/shotlist.md` and `SOUND.md` to match: a **worn, stitched bear** next to the clean bear (read as the same bear, new and old), **one tall floor lamp with a pull chain** instead of three lamps, and **four things with faces** (Bear, Lamp, Mug, Cushion). Also an armchair and a round side table (replaces the nightstand). These are marked **proposed** in `assets/items.md` and need the team's yes.
+- Figma structure: `assets/references/figma/` with a README (how to add a board), an index, and a per-board template. Third-party exports are not committed (`assets/references/.gitignore`).
+- The kit's own docs and the style board were reworded so that no other generation tool is named. **Team rule recorded in `CLAUDE.md`, `DESIGN.md` and `README.md`: ElevenLabs is the only generation tool.** Earlier commits in git history still contain the old wording; history was not rewritten.
+
+### ~19:46 · ElevenLabs connected
+- The key saved by `elevenlabs onboard` in `.env.local` was verified against ElevenLabs: plan **Pro, active**, 0 of 610,000 credits used.
+- Created `.mcp.json` (git-ignored, mode 600) from the kit's example, using that key. It loads when Claude Code is restarted in this folder and the project server is approved.
+- **Not yet checked:** whether the MCP exposes image and video generation, or only audio.
+
+### ~19:47 · Skills search
+- A background search for filmmaking agent skills is running. Candidates will be vetted (read, licence, security notes) before anything is added to the repo.
+
 ## Open questions
 
-1. **ElevenLabs:** is the MCP connected, and does it expose image and video, or only audio? If not, generate stills and clips in the web app.
+1. **ElevenLabs:** key verified (Pro, 610,000 credits). After a restart, does the MCP expose image and video, or only audio? If not, generate stills and clips in the web app.
 2. **The door.** The sketch has none. The shot list treats it as off-frame right.
 3. **The "high shelf"** for the Bear in S3/S4. The sketch only has the sill.
 4. **Team name** for the file name `teamname_filmtitle.mp4`.

@@ -78,7 +78,7 @@ Save each as `audio/<name>.wav`. Make three takes, keep the best, and record the
 | `hop_thud.wav` | Soft small wooden toy hopping and landing on a wooden floor, single light thud, very short |
 | `bed_creak.wav` | Short soft wooden bed frame creak as it shifts, single, 1 second |
 | `puff.wav` | Small soft puff of dust, airy poof, very short |
-| `lamp_click.wav` | Small brass desk lamp switch click, soft, single |
+| `lamp_click.wav` | Soft pull-chain click of a floor lamp, single |
 | `lamp_hum.wav` | Very faint warm electric hum of a small lamp, steady, 20 seconds, seamless loop |
 | `wood_tick.wav` | Small wooden toy tapping once on a wooden shelf, a dry hollow tock |
 | `plush_plop.wav` | Soft stuffed teddy bear set down on a wooden shelf, a gentle cloth plop with a tiny settle, very short |

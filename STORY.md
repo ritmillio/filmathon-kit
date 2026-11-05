@@ -10,7 +10,7 @@ One fixed room. No people. A whole life, from birth to death, told by the things
 
 - 60.0 seconds exactly. 16:9, 1920x1080. 24 fps, drawn on twos.
 - Locked camera. No camera moves, ever. Change comes only from things, light, weather and time of day.
-- No people, no faces on anything except the Teddy Bear and the Lamp (two round eyes each; the Bear has button eyes).
+- No people. Faces only on the things the designer gave faces: the Teddy Bear (button eyes), the Lamp, the Mug and the Cushion (simple dot eyes and a small smile).
 - No dialogue, no on-screen text, except an optional end title card after the last frame.
 
 ## Rules of this world
@@ -30,11 +30,13 @@ Five characters carry the film. Everything else is ensemble.
 |---|---|---|
 | **The Bed** | The shape-shifter. Carries every stage of a body. | cradle, crib, small bed, messy teen bed, double bed, single bed with rails |
 | **The Door** | Every arrival and departure. The narrator. | Opens with light, slams, closes softly. Height marks on its frame. |
-| **The Teddy Bear** | The first object and the thread through the whole film. Has eyes. | floor, shelf, high shelf, alone, into the crib, onto the pillow, floor again |
-| **The Lamp** | Opens its eye at the first cry, last to close it. Has eyes. | night light, desk lamp, warm bedside lamp, dim |
+| **The Teddy Bear** | The first object and the thread through the whole film. Button eyes. | Two drawings: a **clean** bear when new (S1-S5), a **worn** bear with a stitched head and patched belly when old (S6-S8). It moves: shelf, high shelf, alone, into the crib, onto the cushion, floor again |
+| **The Lamp** | Opens its eyes at the first cry, last to close them. | One tall floor lamp with a pull chain and a smile, the same lamp all film. Its light grows, dims and goes out |
 | **The Window** | Weather, time of day, and the tree outside. | sapling, tall tree, huge tree. Sky and light change by stage. |
 
-Ensemble (secondary, may be simple shapes): blocks, ball, mobile, boxes, posters, picture frames, wedding picture, plants, armchair, nightstand, glass, pills, cane, desk, guitar, wall clock.
+Living ensemble from the designer's sketches: the **Armchair**, the **Side Table** (curly legs that act as feet), the **Mug** and the **Cushion** (both with small faces). See `assets/items.md`.
+
+Other ensemble (secondary, may be simple shapes): blocks, ball, mobile, boxes, posters, picture frames, wedding picture, plants, armchair, nightstand, glass, pills, cane, desk, guitar, wall clock.
 
 ## The 60 seconds
 
@@ -84,6 +86,6 @@ Never in the room at any stage: people, text, a second window, a second door, a 
 
 - Do not add, move or remove anything that is not in the ledger.
 - Do not change the window, door, shelves, floor line or bed slot. Ever.
-- Do not show a person, a shadow of a person, a hand, or a face on anything except the Bear and the Lamp.
+- Do not show a person, a shadow of a person, a hand, or a face on anything except the Bear, the Lamp, the Mug and the Cushion.
 - Keep every shot on the locked camera.
 - Keep the stage timings. If a timing must change, change it here first, then in `SOUND.md`.

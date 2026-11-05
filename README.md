@@ -4,7 +4,7 @@ An open-source, tutorial-style toolkit for making a **30–90 second, fully AI-g
 
 It pairs an AI coding agent (Claude Code) with ElevenLabs for generation and FFmpeg for assembly, so a team with **no editing experience** can still ship a clean, correctly formatted film.
 
-> Not affiliated with AI Budapest, ElevenLabs or Higgsfield. Check the [official event page](https://ai-budapest.com/filmathon/) for the rules; they win over anything here.
+> Not affiliated with AI Budapest or ElevenLabs. Check the [official event page](https://ai-budapest.com/filmathon/) for the rules; they win over anything here.
 
 ## The rules that shape everything
 
@@ -17,7 +17,7 @@ It pairs an AI coding agent (Claude Code) with ElevenLabs for generation and FFm
 | Name | `teamname_filmtitle.mp4` |
 | Time | Theme revealed 17:30–18:00, **submission 22:30 sharp** |
 
-Using other generators (Higgsfield, Runway, etc.) or extra credits is allowed but puts you **outside the contest** with no prize. See [docs/07-higgsfield-optional.md](docs/07-higgsfield-optional.md).
+**Team rule: ElevenLabs is the only generation tool we use.** No other generator and no extra credits.
 
 ## Quick start
 
@@ -57,7 +57,6 @@ See [docs/01-timeline.md](docs/01-timeline.md). The short version: **spend 15 mi
 | [04-generation.md](docs/04-generation.md) | Prompting AI video, voice, music and sfx; consistency tricks |
 | [05-editing.md](docs/05-editing.md) | Editing with `film.json`, or iMovie / DaVinci Resolve / CapCut |
 | [06-export-and-submit.md](docs/06-export-and-submit.md) | Final export, validation, cinema checklist |
-| [07-higgsfield-optional.md](docs/07-higgsfield-optional.md) | Using Higgsfield (out of contest) |
 
 ## Scripts
 

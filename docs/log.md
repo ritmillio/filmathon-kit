@@ -98,3 +98,13 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 5. **Disney Figma file:** to be sent. Convert to our own style notes only.
 6. **Credits:** what do image and video generations cost on the Pro package? Check the balance every 30 minutes.
 7. **The Vercel pages** (`change-film-plan.vercel.app`) describe the earlier code-rendered plan. These Markdown files are now the source of truth.
+
+### ~20:50 · First 6 seconds generated with ElevenLabs (sketch -> still -> clip)
+- **Seedance 2.5 is not usable:** the API returns `model_access_denied` ("ByteDance models are disabled by default and require explicit approval"). Seedream is the same. Used **Veo 3.1 Fast** (`veo-3.1-fast-generate-001`), hosted inside ElevenLabs, 1080p, 4 s, native audio off. Veo cannot turn prompt enhancement off.
+- **G1 base room still:** `gemini-3-pro-image`, 2K, sketch as reference. Window, sill, back-wall line and rug within about 2% of the sketch. Approved.
+- **Shot 1 clip:** room locked, moonlight shimmers, dust drifts. Passed.
+- **Shot 2 still:** first try failed (zoomed, lamp and bear kept raw black marker lines). Fixed by saying "same painted style, no black outlines, identical framing" and giving the base still first. Variant B approved.
+- **Shot 2 clip:** layout locked, lamp blinks well; **the mobile drifted** off the cradle in front of the window. Known issue.
+- **Cost:** about 4,250 credits after the still and the first clip (0.7% of 610,000). Shot 2 still and clip not yet measured.
+- Cut file: `exports/first6_ai_silent.mp4` (3 s + 3 s, hard cut, no sound yet). `scripts/el_gen.py` is the generation client.
+- **Audio references** (four Disney tracks) saved locally in `assets/references/audio/` (not committed).

@@ -1,3 +1,7 @@
 # Third-party reference exports stay on the machine. Notes and indexes are committed.
 figma/boards/*/exports/*
 !figma/boards/*/exports/.gitkeep
+
+# Third-party audio references: local only, never committed, never uploaded to a generator
+audio/exports/*
+!audio/exports/.gitkeep

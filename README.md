@@ -66,6 +66,28 @@ See [docs/01-timeline.md](docs/01-timeline.md). The short version: **spend 15 mi
 
 Both need only Python 3 and FFmpeg.
 
+## Sponsors and partners
+
+The Filmathon is organised by [AI Budapest](https://ai-budapest.com) and made possible by:
+
+<table>
+  <tr>
+    <td align="center"><a href="https://elevenlabs.io"><img src="assets/sponsors/elevenlabs.png" alt="ElevenLabs" width="200"></a></td>
+    <td align="center"><a href="https://ai-budapest.com/filmathon/"><img src="assets/sponsors/telekomfilm.svg" alt="TelekomFilm" width="200"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://moonrock.eu"><img src="assets/sponsors/moonrock-animation-studio.svg" alt="Moonrock Animation Studio" width="200"></a></td>
+    <td align="center"><a href="https://ai-budapest.com/filmathon/"><img src="assets/sponsors/westend-innovation-center.svg" alt="Westend Innovation Center" width="200"></a></td>
+  </tr>
+</table>
+
+- **ElevenLabs**: tools and credits for every registered team
+- **TelekomFilm**: event and creative sponsor
+- **Moonrock Animation Studio**: professional partner, mentors and creative guide
+- **Westend Innovation Center**: venue partner for the cinema premiere
+
+Logos are the property of their respective owners and are shown here only to credit the event's sponsors. They are **not** covered by this repository's MIT license. This kit is an independent community project and is not endorsed by the organisers or sponsors.
+
 ## License
 
-MIT. Use it, fork it, run your own filmathon.
+MIT, for the code and docs. Use it, fork it, run your own filmathon.

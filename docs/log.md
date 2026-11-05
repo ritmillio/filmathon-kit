@@ -262,3 +262,9 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - **Checks per clip (look at `stills/<prefix>_check.png`):** same bear size, armchair at the right front corner in every stage except 4, no sparkles or confetti, nothing pops in, lamp pole straight.
 - **Open decisions:** sound (the kit needs an audio track; the team paused it; a fallback is the generated music `audio/music.wav` laid under the cut, no effects, only on the team's yes); the team name for `teamname_filmtitle.mp4`; the final export must be 1920x1080 at 24 fps with audio, MP4.
 - Balance about 357,000 of 610,000 used at 21:34 (counter lags; subagent retries add up).
+
+### 22:20 · Three new endings (the funeral ending was rejected)
+- Team did not like the funeral ending. Made 46-52 s endings, two takes each: `lullaby` (hymn, then the first music-box lullaby returns), `secondline` (dirge breaking into a joyful second line), `hymn` (solo clarinet and piano). Clips `audio/jazz6/s8_<name>_1|2.mp3`; sections 1-7 unchanged (glued B). Outputs `exports/film_v2_end_<name>_1|2.mp4`. Not listened to. Nothing committed.
+
+### 22:05 · Joining script and interim film v4
+- `scripts/make_film.py OUT.mp4` joins the scene clips with 0.5 s dissolves (the two ending clips joined hard) and falls back to the v3 clip for any missing v4 clip. Interim `exports/film_v4_silent.mp4` (57.0 s) built with stages 1, 3, 4, 5, 6 new and stage 2 and the ending from v3. Stages 1, 3, 4, 6 v4 clips are in; stage 2 v4 and the ending v4 were still running.

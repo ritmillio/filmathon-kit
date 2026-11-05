@@ -190,3 +190,9 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 ### 20:35 · Stages 2-8: spec and helper written; seven subagents launched
 - Team liked `exports/first6_B2_silent.mp4` and asked for the other stages as separate 6 s videos (7 more, one subagent each; 48 s in total, valid for the kit's 30-90 s; stage lengths can be raised to 8 s later).
 - Wrote `docs/stage_specs.md` (common rules, recipe, and S2-S8 specs) and `scripts/el_do.py` (one-call still and clip generation). Each subagent makes its own start and end stills (edited from `stills/B2_end.jpg`), one Fast clip and a silent cut, with a 9,000-credit cap per stage, and does not touch git. Results are collected and committed by the main session.
+
+### 20:44 · Stages 2-7 clips returned (silent, look B); stage 8 still running
+- Each subagent made a start and end still plus a Fast clip. Files: `stills/sN_start|end.jpg`, `shots/sN_B_fast.mp4`, `exports/sN_B_silent.mp4`, `docs/prompts/sN_*.txt`. Frames checked by the main session from each contact sheet (`stills/sN_check.png`).
+- **Good:** S2 (child's bed centred, ball rolls, lamp bounces; clean), S3 (door slams, room shakes; clean), S4 (door opens, bear leans, door closes; good story beat), S6 (autumn dusk, all consistent), S7 (bed with rails, armchair, tree).
+- **Flaws to fix by re-run or trim:** S5 bedding balloons into an arch at about 4.5 s and the lamp leans far over; S7 the armchair tips over at about 3-4 s; S6 the door opens partly (spec said closed) and the lamp leans far at about 1 s; S4 the door opens wider than a crack; lamp pole bends in S2, S3, S5.
+- Balance $N of 610,000 (counter lags; each subagent used about 4,000-8,000).

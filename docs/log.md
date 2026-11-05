@@ -227,3 +227,15 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 
 ### 21:25 · Stage 3 blue tears (editing step, no generation)
 - `scripts/blue_tears.py` recolours only the near-black tear drops beside the lamp pole in frames 95-143 of the stage 3 clip to a soft muted blue (118,160,214); the rest of the frame is untouched. Output `exports/s03_v3_blue_silent.mp4`. Minor flaw: a few small blue specks at the floor splash spots in the last half second.
+
+### 21:28 · Per-section jazz score for film_v2 (52 s), made through the Vercel AI Gateway
+- Cuts of `exports/film_v2_silent.mp4` measured at 6, 14, 20, 28, 34, 40, 46 s. One `elevenlabs/music-v2.5` clip per stage, two takes each (`audio/jazz/s<N>_a|b.mp3`), each with its own style: S1 hush celesta, S2 bouncy swing, S3 moody minor cool jazz, S4 sparse solo piano, S5 warm light big band, S6 mellow clarinet ballad, S7 fragile solo piano and strings, S8 New Orleans jazz-funeral dirge fading out.
+- Joined with 0.5 s crossfades at each cut: `audio/jazz/jazz_arc_a.wav`, `jazz_arc_b.wav` (52.000 s) and `exports/film_v2_jazz_a.mp4`, `film_v2_jazz_b.mp4` (video copied, music only, no SFX). Not listened to by the assistant. Cost about $0.2 on the gateway. Nothing committed or pushed.
+
+### 21:40 · Revision: one continuous song (gateway, Music v2.5)
+- Team asked for one cohesive score with seamless transitions and a bittersweet, resolved ending (and subtle emotional picture changes in S1, S4, S7, S8; not done, need new clips). Replaced the eight-clip join with four one-shot 52 s takes: one tempo (72 bpm swing), key of C, one ensemble, the lullaby motif returning and evolving, final section a warm hymn-like resolution. Files: `audio/jazz2/take1-4.mp3`, `exports/film_v2_oneSong_take1-4.mp4`. Not listened to by the assistant; levels show every take decays over the last 4-6 s. Cost about $0.26. Nothing committed.
+
+### 21:34 · Film v3 (60 s, silent) assembled from revision brief v3
+- Stage 1 v3 (bear climbs down and looks into the crib, clean), Stage 2 v3 (ball rolls out the door and does not return; bear in bed, no wink; lamp pole still bends), Stage 3 (v2 clip with blue tears via `scripts/blue_tears.py`), Stage 4 and 5 unchanged from v2, Stage 6 v4 (old patched bear, fully visible, leaves only outside; it rises slowly, climbs down the chair side and ends at the bed, not beside the chair as planned; accepted as a lead-in to the ending), Ending v3 (two 8 s clips sharing one frame: the old bear climbs onto the bed and settles; then sits up, reaches toward the lamp, the lamp goes out and the room fades). Known flaw: the bear looks too large when it sits up in the ending's second clip.
+- Joined by hard cuts: `exports/film_v3_silent.mp4`, 1920x1080, 24 fps, 60.000 s, silent. Earlier versions kept (`film_v2_silent.mp4`, `film_B_all8_silent.mp4`).
+- Balance $N of 610,000 (counter lags).

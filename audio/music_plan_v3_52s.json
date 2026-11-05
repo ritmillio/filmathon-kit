@@ -1,0 +1,234 @@
+{
+ "chunks": [
+  {
+   "text": "[S1 Birth]",
+   "duration_ms": 6000,
+   "positive_styles": [
+    "instrumental",
+    "storybook jazz, one recurring four-note celesta lullaby motif in C major, 72 BPM pulse (or its half or double), warm vintage recording",
+    "almost silent hush at the start",
+    "a single music-box celesta note, then the four-note lullaby motif alone on celesta and soft harp",
+    "a small warm swell with a gentle string pad when the door opens at 1 second",
+    "a hint of happiness and wonder",
+    "very sparse, no drums"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "singing",
+    "electronic",
+    "synthesizer",
+    "dubstep",
+    "modern pop",
+    "epic trailer",
+    "abrupt stop",
+    "silence gap"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S2 Childhood]",
+   "duration_ms": 8000,
+   "positive_styles": [
+    "instrumental",
+    "storybook jazz, one recurring four-note celesta lullaby motif in C major, 72 BPM pulse (or its half or double), warm vintage recording",
+    "the lullaby motif now bouncy and playful",
+    "walking pizzicato upright bass",
+    "clarinet and muted trumpet trading skipping phrases",
+    "brushed snare with light swing",
+    "cheeky hopping accents, toy-box fun",
+    "bright major key",
+    "the harp and celesta of the previous section carry over for one bar"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "singing",
+    "electronic",
+    "synthesizer",
+    "dubstep",
+    "modern pop",
+    "epic trailer",
+    "abrupt stop",
+    "silence gap"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S3 Teens]",
+   "duration_ms": 6000,
+   "positive_styles": [
+    "instrumental",
+    "storybook jazz, one recurring four-note celesta lullaby motif in C major, 72 BPM pulse (or its half or double), warm vintage recording",
+    "the motif turned minor, A minor colours",
+    "muted trumpet and muted electric guitar chords",
+    "stop-start syncopated cool jazz groove",
+    "brushes on a snare like rain",
+    "one sharp accented hit like a door slam about 3 seconds in",
+    "grumpy but gentle, rainy night"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "singing",
+    "electronic",
+    "synthesizer",
+    "dubstep",
+    "modern pop",
+    "epic trailer",
+    "abrupt stop",
+    "silence gap"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S4 Away]",
+   "duration_ms": 8000,
+   "positive_styles": [
+    "instrumental",
+    "storybook jazz, one recurring four-note celesta lullaby motif in C major, 72 BPM pulse (or its half or double), warm vintage recording",
+    "much slower, half-time feel",
+    "very sparse solo felt piano notes with long gaps",
+    "a single long sustained string note",
+    "faint cold celesta echoes of the motif",
+    "hollow, wistful, melancholic, tender",
+    "never fully silent"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "singing",
+    "electronic",
+    "synthesizer",
+    "dubstep",
+    "modern pop",
+    "epic trailer",
+    "abrupt stop",
+    "silence gap"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S5 Family]",
+   "duration_ms": 6000,
+   "positive_styles": [
+    "instrumental",
+    "storybook jazz, one recurring four-note celesta lullaby motif in C major, 72 BPM pulse (or its half or double), warm vintage recording",
+    "the loudest and fullest moment",
+    "the motif in warm radiant major on strings, clarinet and trombone",
+    "walking bass and brushed drums in a happy full swing, light big-band feel",
+    "fluttering harp and glockenspiel sparkle",
+    "abundant, cosy, joyful, swelling"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "singing",
+    "electronic",
+    "synthesizer",
+    "dubstep",
+    "modern pop",
+    "epic trailer",
+    "abrupt stop",
+    "silence gap"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S6 Quiet years]",
+   "duration_ms": 6000,
+   "positive_styles": [
+    "instrumental",
+    "storybook jazz, one recurring four-note celesta lullaby motif in C major, 72 BPM pulse (or its half or double), warm vintage recording",
+    "relaxed slower ballad, rubato",
+    "solo warm clarinet playing the motif over a gentle piano trio",
+    "soft strings underneath",
+    "autumn nostalgia, content and a little wistful",
+    "brushed drums very light"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "singing",
+    "electronic",
+    "synthesizer",
+    "dubstep",
+    "modern pop",
+    "epic trailer",
+    "abrupt stop",
+    "silence gap"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S7 Old age]",
+   "duration_ms": 6000,
+   "positive_styles": [
+    "instrumental",
+    "storybook jazz, one recurring four-note celesta lullaby motif in C major, 72 BPM pulse (or its half or double), warm vintage recording",
+    "very slow and fragile",
+    "solo piano playing the motif low and slowly",
+    "thin trembling strings",
+    "long gaps and breaths between phrases",
+    "bittersweet, nostalgic, awareness of passing time",
+    "no drums"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "singing",
+    "electronic",
+    "synthesizer",
+    "dubstep",
+    "modern pop",
+    "epic trailer",
+    "abrupt stop",
+    "silence gap"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  },
+  {
+   "text": "[S8 End]",
+   "duration_ms": 6000,
+   "positive_styles": [
+    "instrumental",
+    "storybook jazz, one recurring four-note celesta lullaby motif in C major, 72 BPM pulse (or its half or double), warm vintage recording",
+    "a slow tender New Orleans jazz funeral hymn that turns warm and major",
+    "soft muted trumpet, clarinet, trombone and strings playing a hymn-like version of the motif",
+    "gentle sadness together with happiness, peace and acceptance",
+    "the melody resolves naturally to a warm held major chord",
+    "the final chord rings out naturally to the very last second, no fade out",
+    "cinematic, complete, comforting"
+   ],
+   "negative_styles": [
+    "vocals",
+    "lyrics",
+    "singing",
+    "electronic",
+    "synthesizer",
+    "dubstep",
+    "modern pop",
+    "epic trailer",
+    "abrupt stop",
+    "silence gap"
+   ],
+   "context_adherence": "high",
+   "conditioning_ref": null,
+   "condition_strength": null
+  }
+ ]
+}

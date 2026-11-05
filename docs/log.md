@@ -67,9 +67,16 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 ### ~19:47 · Skills search
 - A background search for filmmaking agent skills is running. Candidates will be vetted (read, licence, security notes) before anything is added to the repo.
 
+### ~20:00 · Skills vetted and added; ElevenLabs image and video confirmed
+- A background search found ten skill candidates. Its report was based on summaries, so we fetched the raw files at pinned commits and read them ourselves.
+- **Added** to `.claude/skills/`: `shot-list`, `color-script`, `scene-breakdown`, `cut-list` (MIT, text only) and `elevenlabs` (MIT; SKILL.md and references only). Sources, commits and rules are in `.claude/skills/SOURCES.md`. Scripts and agent config were not copied.
+- **Not added:** `shot-planning` (its footage route breaks our rules), and two skills with no licence (reading only).
+- **Confirmed against ElevenLabs' live API spec:** image and video generation exist (`/v1/flows/image`, `/v1/flows/video`) with several hosted models and a start-frame option. Written up in `docs/elevenlabs-generation.md`. This answers the earlier open question about image and video.
+- **Not yet tested:** our key's Flows permission, credit cost per generation, and which model holds the room best. First test is described in that file.
+
 ## Open questions
 
-1. **ElevenLabs:** key verified (Pro, 610,000 credits). After a restart, does the MCP expose image and video, or only audio? If not, generate stills and clips in the web app.
+1. **ElevenLabs:** key verified (Pro, 610,000 credits). Image and video exist in the API (see `docs/elevenlabs-generation.md`). After a restart, does the MCP expose them? If not, call the API or use the web app.
 2. **The door.** The sketch has none. The shot list treats it as off-frame right.
 3. **The "high shelf"** for the Bear in S3/S4. The sketch only has the sill.
 4. **Team name** for the file name `teamname_filmtitle.mp4`.

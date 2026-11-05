@@ -206,7 +206,7 @@ Clip: `<style prefix> Start from the attached image. Locked camera, no camera mo
 ## Tooling note: ElevenLabs
 
 - Setup (from the kit): API key from your ElevenLabs profile in `.env`, then `claude mcp add elevenlabs -e ELEVENLABS_API_KEY=... -e ELEVENLABS_MCP_OUTPUT_MODE=files -- uvx elevenlabs-mcp`. Never paste the key into chat.
-- The MCP server covers **audio** (speech, sound effects, music). Whether it also exposes **image and video** generation must be checked on the day. If it does not, generate stills and clips in the ElevenLabs web app and save them into `stills/` and `shots/`. The rule requires all generation to come from the Pro package either way.
+- The MCP server covers **audio** (speech, sound effects, music). Whether it also exposes **image and video** generation must be checked on the day. If it does not, generate stills and clips in the ElevenLabs web app and save them into `stills/` and `shots/`. ElevenLabs also exposes image and video generation through its API (Flows). See `docs/elevenlabs-generation.md`. The rule requires all generation to come from the Pro package either way.
 
 ## Forbidden
 

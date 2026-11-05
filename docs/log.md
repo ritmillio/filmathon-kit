@@ -282,3 +282,7 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 ### 22:17 · FINAL EXPORT
 - `exports/final/teamname_lifetimeinonelittleroom.mp4` (**rename teamname to the real team name**): film v4 (57.0 s) + a black chalk-writing title card "lifetime in one little room" (generated with `gpt-image-2.5-sunburst` via ElevenLabs, `docs/prompts/title_card.txt`, 4.5 s, 1 s fade from the film) + the team's music `exports/film_v2_teen_smooth1.mp4` (52 s audio, 2.5 s fade-out at 49.5 s, then silence). 1920x1080, 24 fps, H.264 + AAC, 60.5 s.
 - **To confirm by the team:** that `film_v2_teen_smooth1.mp4`'s music was generated in ElevenLabs (the rules count only ElevenLabs audio); the bear "slightly older" change for stages 6-8 was NOT regenerated (no time).
+
+### 22:20 · Title card pure black; slim-bear redo started
+- Title card background crushed to pure black (smoothstep levels on `stills/title_card.png`, chalk unchanged) -> `stills/title_card_black.jpg`; final `exports/final/teamname_lifetimeinonelittleroom.mp4` rebuilt (60.5 s, music kept).
+- Team: the old bear in stages 6-7 is "still fat". Two best-effort subagents started ~22:20 to redo stage 6 (`s06_v6`) and the ending (`s7_v6`) with a slim old bear (thin limbs, small belly, same head). Swap in only if they finish in time; the current final stays valid.

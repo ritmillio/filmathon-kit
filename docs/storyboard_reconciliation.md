@@ -25,6 +25,12 @@ Source (the team's, unchanged): `docs/storyboard_expanded.md`. This note compare
 | 8 | **Stage lighting**: "warm and bright, colourful, dramatic" | One cold night plate with a single gold light; palette tokens only (`DESIGN.md`) | Keep the palette. Express "colourful" through how much warm light there is, not new hues |
 | 9 | **Sound:** a click leads (S1), "a low musical note" in S7 | `SOUND.md` has the click (`lamp_click.wav`) and silence plan | Compatible. The final click needs one more cue if the click ending is chosen |
 
+## Decided by the team's feedback (21:30)
+- **Continuity first:** nothing may pop in, vanish or jump to a new place within a shot. Objects that exist in a shot are in both the start and end frames.
+- **The door is a real object on the right wall** (wooden, visible, opens and stays visible). This resolves the old open question (door off-frame).
+- **The cradle (bed) stays at the centre of the rug.**
+- **Look B** (marker, crayon, torn paper) is the film's look (`docs/style_v3.md`). No sound until the team does it.
+
 ## Not copied
 The "Additional ideas" lists are options, not requirements. Use at most one per shot: AI video holds one clear action per clip.
 

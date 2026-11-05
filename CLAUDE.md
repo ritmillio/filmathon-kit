@@ -8,6 +8,7 @@ Read these first, in this order:
 @DESIGN.md
 @SOUND.md
 @docs/shotlist.md
+@docs/characters.md
 @docs/log.md
 
 ## Hard rules

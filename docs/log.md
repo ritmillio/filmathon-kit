@@ -85,6 +85,10 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - **Risk noted:** our idea (living household objects) is close to these characters. Added distance rules to the notes: keep our two-dot faces, no lashes or eyebrows, no hands or costumes, our own palette and scribbly outline, mostly passive objects, and never use these images as generator references.
 - Nothing from this board has reached a prompt yet. Qualities become part of the STYLE line only after the team approves them.
 
+### ~20:30 · Character notes compiled; ElevenLabs status re-checked
+- **`docs/characters.md`** (continuity bible) compiled by the assistant from the story, design rules, item registry and sketches: one block per character with look, acting, key moments, sound and a **prompt block** to paste verbatim into every prompt. Five questions for the team are at the bottom. Draft, needs approval.
+- **ElevenLabs status:** key verified (Pro, active, 0 of 610,000 credits). The key can reach the image and video generation endpoints (list calls returned HTTP 200, no credits used). The MCP is still **Pending approval** until `claude` is run in this folder and the server is approved.
+
 ## Open questions
 
 1. **ElevenLabs:** key verified (Pro, 610,000 credits). Image and video exist in the API (see `docs/elevenlabs-generation.md`). After a restart, does the MCP expose them? If not, call the API or use the web app.

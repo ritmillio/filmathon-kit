@@ -1,0 +1,85 @@
+time_s,file,gain_db,fade_in_s,fade_out_s,dur_s,src_start_s,note
+0.0,room_tone.wav,-30,2,0.4,56.2,,Room tone under everything; stops at 56.2 for the silence
+0.5,heart_slow.wav,-16,0.3,1.0,6.0,,"Heartbeat at the birth, 60 bpm"
+1.4,door_open.wav,-8,0,0,,,"Door flung open, light floods in"
+2.2,pop.wav,-12,0,0,,,Cradle pops in
+2.6,pop.wav,-14,0,0,,,Mobile
+2.9,pop.wav,-14,0,0,,,Blanket
+3.0,baby_cry.wav,-6,0,0.3,3.0,,The first cry
+3.7,plush_plop.wav,-12,0,0,,,The Teddy Bear is set on the shelf with a soft plop
+4.0,lamp_hum.wav,-32,2,0.4,52.2,,Faint hum while the Lamp is awake; ends when its eye closes
+4.0,music.wav,-14,0.6,1.2,20.5,4.0,Music enters with the first note. Birth to away.
+4.0,lamp_click.wav,-14,0,0,,,The Lamp opens its eye
+6.4,bed_creak.wav,-14,0,0,,,Cradle becomes crib
+6.5,puff.wav,-16,0,0,,,
+7.0,steps_child.wav,-14,0.3,0.8,4.0,,Small running feet
+7.8,pencil_scratch.wav,-18,0,0,,,Height mark 1
+8.4,bed_creak.wav,-14,0,0,,,Crib becomes small bed
+8.5,puff.wav,-16,0,0,,,
+9.6,laugh.wav,-14,0,0.5,3.0,,Laughter
+10.0,hop_thud.wav,-16,0,0,,,A toy hops
+10.2,pencil_scratch.wav,-18,0,0,,,Height mark 2
+11.0,hop_thud.wav,-16,0,0,,,
+11.4,door_open.wav,-14,0,0,,,"Door opens softly, things perk up"
+12.2,hop_thud.wav,-16,0,0,,,
+12.6,pencil_scratch.wav,-18,0,0,,,Height mark 3
+14.4,paper_rip.wav,-10,0,0,,,Animal wallpaper peels
+15.0,rain.wav,-18,1.5,1.0,7.5,,"Rain on the window, teens"
+15.6,pop.wav,-14,0,0,,,Posters go up
+16.0,guitar_muffled.wav,-20,0.5,1.0,5.5,,Guitar through the wall
+16.0,pop.wav,-14,0,0,,,
+16.4,pop.wav,-14,0,0,,,
+17.5,door_slam.wav,-4,0,0,,,The slam
+18.2,lamp_click.wav,-12,0,0,,,The Lamp rolls its eyes
+19.0,packing.wav,-16,0,0.5,2.0,,Toys pack into a box
+20.2,plush_plop.wav,-12,0,0,,,The Teddy Bear is moved to the high shelf
+22.0,packing.wav,-10,0,0.5,3.0,,Things pack themselves
+23.0,slide.wav,-14,0,0,,,
+24.0,steps_adult.wav,-10,0,0.5,2.0,,Footsteps leaving
+25.0,clock.wav,-22,1.0,1.0,4.0,,Clock in the empty room
+25.2,door_close.wav,-8,0,0,,,The door closes. Then silence.
+25.5,wind_hush.wav,-22,1.5,1.0,3.0,,Cold wind in the empty room
+27.0,music.wav,-14,1.5,0.6,19.0,27.0,Warm and full: family and quiet years
+27.0,puff.wav,-20,0,0,,,Dust
+28.4,door_open.wav,-8,0,0,,,Warm light floods in
+29.4,slide.wav,-14,0,0,,,Double bed arrives
+29.6,pop.wav,-14,0,0,,,Plant
+30.4,pop.wav,-14,0,0,,,Plant
+31.0,chair_creak.wav,-16,0,0,,,Armchair arrives
+31.8,wood_tick.wav,-14,0,0,,,Wedding picture
+33.0,heart_fast.wav,-26,1.0,1.0,5.0,,"The baby heartbeat, quietly, under the family stage"
+33.0,pop.wav,-12,0,0,,,The crib appears
+34.0,baby_coo.wav,-12,0,0.4,3.0,,Baby
+35.5,plush_plop.wav,-12,0,0,,,The Teddy Bear is lifted into the crib
+36.0,laugh.wav,-14,0,0.5,3.0,,Warm laughter
+36.6,pencil_scratch.wav,-18,0,0,,,"Second column, mark 1"
+37.6,pencil_scratch.wav,-18,0,0,,,"Second column, mark 2"
+38.0,clock.wav,-26,1.0,1.0,8.0,,Slow quiet clock
+39.0,bed_creak.wav,-14,0,0,,,Crib becomes a child bed
+39.1,puff.wav,-18,0,0,,,
+41.0,slide.wav,-14,0,0,,,The child bed leaves
+41.6,door_close.wav,-12,0,0,,,
+42.0,pop.wav,-18,0,0,,,Pictures multiply
+43.0,pop.wav,-18,0,0,,,
+44.0,pop.wav,-18,0,0,,,
+45.0,chair_creak.wav,-16,0,0,,,The armchair wears
+45.6,music.wav,-18,0.6,0.8,8.4,45.6,"Old age, lower and thinner"
+46.0,clock.wav,-16,1.5,0.3,10.2,,"Loud clock in old age, stops at 56.2"
+46.6,bed_creak.wav,-12,0,0,,,The bed narrows and gets rails
+46.8,wood_tick.wav,-12,0,0,,,Rails click on
+47.6,cane_tap.wav,-12,0,0,,,Cane
+48.4,pill_rattle.wav,-16,0,0,,,Pills
+49.0,breath_old.wav,-14,1.5,0.3,7.2,,"Slow breathing, stops at 56.2"
+49.5,heart_slow.wav,-14,2.0,0.3,6.7,,"Heartbeat returns, ends at 56.2"
+50.0,slide.wav,-12,0,0,,,The armchair slides to the bed
+50.6,chair_creak.wav,-14,0,0,,,
+51.6,plush_plop.wav,-14,0,0,,,The Teddy Bear onto the pillow
+52.5,bed_creak.wav,-20,0,0,,,A tremble
+54.6,wood_tick.wav,-14,0,0.1,0.6,,The armchair goes still
+55.3,plush_plop.wav,-14,0,0.1,0.6,,The Teddy Bear goes still
+56.0,lamp_click.wav,-8,0,0.1,0.4,,The Lamp closes its eye. Everything stops at 56.4.
+57.3,door_open.wav,-8,0,0,,,New light from the door after one second of silence
+57.4,room_tone.wav,-32,0.5,0.5,2.6,,Room tone returns with the new light
+57.8,heart_fast.wav,-10,0.1,0.4,2.2,,"Newborn heartbeat, double speed. The loop."
+58.0,music.wav,-12,0.05,1.2,2.0,4.1,The first note again. Set src_start to the first note of your take.
+58.4,baby_cry.wav,-6,0,0.4,1.6,,A new cry. Fades at 60.0.

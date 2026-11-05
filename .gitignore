@@ -18,3 +18,5 @@ exports/*
 !sfx/.gitkeep
 !exports/.gitkeep
 .DS_Store
+# Local secrets written by `elevenlabs onboard`
+/.env.local

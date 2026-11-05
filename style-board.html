@@ -1,0 +1,398 @@
+<title>Night Plate Style Board</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: one narrow reading column; a live canvas lab in the middle, swatches and prompt cards around it. */
+:root {
+  --bg: #eef2f9;
+  --fg: #14203a;
+  --muted: #4d5d7d;
+  --card: #ffffff;
+  --line: #cfd8e8;
+  --accent: #9a5f10;
+  --accent-fg: #ffffff;
+  --code-bg: #e4eaf6;
+  --warn-bg: #fbf0d8;
+  --warn-line: #e2c070;
+  --display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1430; --fg: #e6ecf8; --muted: #9fb0d0; --card: #121e44; --line: #263463;
+    --accent: #f0b64a; --accent-fg: #1a1203; --code-bg: #0a1230; --warn-bg: #2a2410; --warn-line: #6b5a1f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1430; --fg: #e6ecf8; --muted: #9fb0d0; --card: #121e44; --line: #263463;
+  --accent: #f0b64a; --accent-fg: #1a1203; --code-bg: #0a1230; --warn-bg: #2a2410; --warn-line: #6b5a1f;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px 64px;
+}
+main { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.2rem; }
+p { margin: 0; max-width: 65ch; }
+a { color: var(--accent); }
+.eyebrow { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.lede { font-size: 1.15rem; color: var(--muted); }
+section { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips a { text-decoration: none; border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px; font-size: .85rem; color: var(--fg); }
+.chips a:hover { border-color: var(--accent); }
+.note { background: var(--warn-bg); border: 1px solid var(--warn-line); padding: 14px 16px; border-radius: 6px; font-size: .92rem; max-width: 70ch; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 18px; min-width: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.dna { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.dna .card h3 { margin-bottom: 6px; }
+.dna .card p { font-size: .95rem; color: var(--muted); }
+.stage-wrap { display: flex; flex-direction: column; gap: 14px; }
+canvas#stage { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; border-radius: 6px; border: 1px solid var(--line); background: #0f1d44; display: block; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.controls label { display: inline-flex; gap: 6px; align-items: center; font-size: .9rem; cursor: pointer; }
+.controls input[type=checkbox] { accent-color: var(--accent); width: 16px; height: 16px; }
+select, button { font: inherit; }
+select { background: var(--card); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; }
+button { background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 6px; padding: 8px 14px; cursor: pointer; font-weight: 700; }
+button.ghost { background: transparent; color: var(--fg); border: 1px solid var(--line); font-weight: 500; }
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+.sw { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--card); text-align: left; padding: 0; color: var(--fg); font-weight: 400; }
+.sw .chip { height: 64px; display: flex; align-items: end; padding: 6px 8px; font-family: var(--mono); font-size: .75rem; }
+.sw .meta { padding: 8px; font-size: .82rem; line-height: 1.35; }
+.sw .meta b { display: block; font-size: .85rem; }
+.sw .meta span { color: var(--muted); }
+.prompt { display: flex; flex-direction: column; gap: 10px; }
+.prompt header { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.prompt pre { margin: 0; background: var(--code-bg); border-radius: 6px; padding: 14px; font-family: var(--mono); font-size: .82rem; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; }
+.tag { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; color: var(--muted); }
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: .92rem; background: var(--card); }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+.yes { color: #1f8a4c; font-weight: 700; }
+.no { color: #c0392b; font-weight: 700; }
+:root[data-theme="dark"] .yes, :root:not([data-theme="light"]) .yes { }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .yes { color: #5fd08e; } :root:not([data-theme="light"]) .no { color: #ff8a7a; } }
+:root[data-theme="dark"] .yes { color: #5fd08e; } :root[data-theme="dark"] .no { color: #ff8a7a; }
+ol.shots { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+ol.shots li { display: grid; grid-template-columns: 92px 1fr; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+ol.shots .t { font-family: var(--mono); font-size: .85rem; color: var(--accent); }
+ol.shots p { font-size: .92rem; }
+.src { font-size: .9rem; display: grid; gap: 4px; padding-left: 18px; margin: 0; }
+@media (max-width: 480px) { ol.shots li { grid-template-columns: 1fr; gap: 4px; } }
+</style>
+
+<main>
+  <header style="display:flex;flex-direction:column;gap:16px">
+    <div class="eyebrow">Style study · 60-second short, theme “Change”</div>
+    <h1>Night Plate Style Board</h1>
+    <p class="lede">A study of the look of “Christian Dior’s Night in Color” (Sylvain Chomet, Nov 2026): what it is made of, which parts we can rebuild with code in about four hours, and the prompts and briefs to do it.</p>
+    <nav class="chips" aria-label="Sections">
+      <a href="#dna">Style DNA</a><a href="#lab">Live lab</a><a href="#palette">Palette</a><a href="#prompts">Prompts</a><a href="#feasible">Feasibility</a><a href="#shots">Shot plan</a><a href="#sources">Sources</a>
+    </nav>
+    <div class="note"><b>How firm is this?</b> The technique comes from press and Dior’s own description. The visual notes come from one full-size frame and three thumbnails. Colors are matched by eye, not measured, and frame rate and camera moves are not verified. Downloading the film for frame-by-frame measurement was not done.</div>
+  </header>
+
+  <section id="dna">
+    <h2>Style DNA</h2>
+    <p>One sentence: 1940s–50s European feature-animation craft, with flat cel-colored characters and thin tinted outlines over painterly textured backdrops, one warm light against a cold night, staged like theater.</p>
+    <div class="dna">
+      <div class="card"><h3>Cut-out pipeline</h3><p>Characters are drawn and animated separately, cut out, then assembled onto painted backdrops. This is the old multi-layer method, and it is the one we copy.</p></div>
+      <div class="card"><h3>Painted plates</h3><p>Night sky with broad visible brush streaks, pale snow drifts, paper grain. The ground is textured while the figures stay flat.</p></div>
+      <div class="card"><h3>Tinted outlines</h3><p>Lines are a darker tint of each fill, brown on gold, navy on a suit. Not black. Slightly irregular, handmade.</p></div>
+      <div class="card"><h3>Caricature</h3><p>Long noses, big hands, oversized eyes, small figures in big space. French bande dessinée line, not anime and not 3D.</p></div>
+      <div class="card"><h3>Warm against cold</h3><p>Ultramarine and navy night, snow whites, one gold light, string-light bokeh. Los Angeles scenes read warmer.</p></div>
+      <div class="card"><h3>Theater staging</h3><p>Long shots, little camera movement. Emotion comes from body language. In Chomet’s earlier work, atmosphere (weather, passing light) is added in compositing.</p></div>
+    </div>
+  </section>
+
+  <section id="lab">
+    <h2>Live lab: build the look layer by layer</h2>
+    <p>An original wooden bird, drawn with code. Switch each ingredient off and on to see what it contributes. Turn the frame rate down to 8 for the “drawn on twos or threes” feel.</p>
+    <div class="stage-wrap card">
+      <canvas id="stage" aria-label="Animated test scene: a wooden bird on a snowy windowsill at night"></canvas>
+      <div class="controls" id="toggles">
+        <label><input type="checkbox" data-k="paint" checked> Painted streaks</label>
+        <label><input type="checkbox" data-k="outline" checked> Tinted outline</label>
+        <label><input type="checkbox" data-k="wobble" checked> Line wobble</label>
+        <label><input type="checkbox" data-k="glow" checked> Warm glow</label>
+        <label><input type="checkbox" data-k="snow" checked> Snow</label>
+        <label><input type="checkbox" data-k="bokeh" checked> Bokeh lights</label>
+        <label><input type="checkbox" data-k="grain" checked> Grain</label>
+        <label><input type="checkbox" data-k="vig" checked> Vignette</label>
+      </div>
+      <div class="controls">
+        <label for="fps">Drawings per second</label>
+        <select id="fps"><option value="24">24 (smooth)</option><option value="12" selected>12 (on twos)</option><option value="8">8 (on threes)</option></select>
+        <button id="play" type="button">Pause</button>
+        <button id="reseed" type="button" class="ghost">New painting</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="palette">
+    <h2>Palette (matched by eye)</h2>
+    <p>Click a swatch to copy its hex. These come from one frame, so treat them as a starting point.</p>
+    <div class="swatches" id="swatches"></div>
+  </section>
+
+  <section id="prompts">
+    <h2>Prompts and briefs</h2>
+    <div class="note"><b>Constraint check.</b> The brief rules out AI video generation and Higgsfield. Whether AI <em>image</em> generation for still backgrounds is allowed is not confirmed. Check the competition rules first. Prompts 1 and 3 are only for that case. Prompts 2 and 4 are art direction for our own drawing and code.</div>
+    <div class="grid" style="grid-template-columns:1fr" id="promptlist"></div>
+  </section>
+
+  <section id="feasible">
+    <h2>What we can rebuild in four hours</h2>
+    <div class="tablewrap" role="region" aria-label="Feasibility table" tabindex="0">
+      <table>
+        <thead><tr><th>Element</th><th>Feasible?</th><th>How</th></tr></thead>
+        <tbody>
+          <tr><td>Painted streaky sky and snow</td><td class="yes">Yes</td><td>Numpy or canvas: directional streak strokes over a gradient, then grain. One image per scene.</td></tr>
+          <tr><td>Flat cel characters, tinted outline</td><td class="yes">Yes, if simple</td><td>Fill shapes, stroke in a darker tint. Original characters only.</td></tr>
+          <tr><td>Handmade line wobble</td><td class="yes">Yes</td><td>Re-jitter outline points on every drawing; hold each drawing for two frames.</td></tr>
+          <tr><td>Cut-out rigging</td><td class="yes">Yes</td><td>Wing, head and tail rotate on pivots. This is how the real film is built.</td></tr>
+          <tr><td>Warm light on cold night</td><td class="yes">Yes</td><td>Additive radial glow, bokeh dots, final grade in ffmpeg.</td></tr>
+          <tr><td>Weather and light change</td><td class="yes">Yes</td><td>Animate sky tint, snow density, cloud shadow. Also carries the theme “Change”.</td></tr>
+          <tr><td>Fluid human acting</td><td class="no">No</td><td>Avoid. Use an object or animal as the lead.</td></tr>
+          <tr><td>Hand-drawn feature-grade character animation</td><td class="no">No</td><td>The Dior film took months. Do not chase it.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="shots">
+    <h2>Draft shot plan for “The Last Stone”</h2>
+    <p>A proposal built on concept A from the handoff (fixed camera, a wooden bird on a windowsill, ends on a new windowsill). Locked camera matches the theater staging and keeps the schedule safe.</p>
+    <ol class="shots">
+      <li><span class="t">0:00 – 0:10</span><p>Spring morning, 1965. Soft warm light, new wooden bird, snow-free sill. Establish the locked frame.</p></li>
+      <li><span class="t">0:10 – 0:20</span><p>Summer. Light swings across the sill, curtains change color. Bird unchanged.</p></li>
+      <li><span class="t">0:20 – 0:30</span><p>Autumn dusk. Window light turns amber, a television glow appears in the room.</p></li>
+      <li><span class="t">0:30 – 0:40</span><p>Winter night. The full Dior-style night plate: navy, snow, one warm lamp. The emotional center.</p></li>
+      <li><span class="t">0:40 – 0:50</span><p>Dust and empty light. Wallpaper fades, the sill is bare except the bird.</p></li>
+      <li><span class="t">0:50 – 1:00</span><p>Cut to a new windowsill, a new morning. The bird is the one constant. Hold.</p></li>
+    </ol>
+    <div class="card"><h3>Four-hour order of work</h3>
+      <p style="margin-top:8px">0:00–0:30 style test from this lab · 0:30–1:30 six painted plates · 1:30–2:30 bird rig and loops · 2:30–3:15 compositing, light and weather changes in ffmpeg · 3:15–3:45 music and sound in ElevenLabs · 3:45–4:00 final export and check.</p>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <ul class="src">
+      <li><a href="https://www.collater.al/en/dior-christian-diors-night-in-color-animated-film-sylvain-chomet/">Collater: Dior presents Christian Dior’s Night in Color</a></li>
+      <li><a href="https://www.awn.com/news/christian-diors-night-color-gets-sylvain-chomet-touch">Animation World Network: the Chomet touch</a></li>
+      <li><a href="https://metalmagazine.eu/en/post/christian-diors-night-in-color">Metal Magazine: palette and characters</a></li>
+      <li><a href="https://www.fashionprfirm.com/blogs/news/dior-sylvain-chomet-night-in-color-holiday-film-2026">Fashion PR Firm: hand-drawn holiday film</a></li>
+      <li><a href="https://www.awn.com/animationworld/chomet-talks-illusionist">AWN: Chomet on The Illusionist (backgrounds, staging, one animator per character)</a></li>
+      <li><a href="https://www.europeananimationjournal.com/2025/07/15/the-grammar-of-pantomime-les-triplettes-de-belleville">European Animation Journal: line and caricature in Chomet’s style</a></li>
+      <li><a href="https://www.thewrap.com/culture-lifestyle/culture/christian-dior-night-in-color-animated-short-rihanna/">TheWrap: cast and release</a></li>
+    </ul>
+  </section>
+</main>
+
+<script>
+(function () {
+  "use strict";
+  /* ---------- palette ---------- */
+  var SW = [
+    { n: "Night navy", h: "#0f1d44", r: "Sky top, shadows" },
+    { n: "Ultramarine", h: "#2a4a8f", r: "Sky mid, brush body" },
+    { n: "Snow blue", h: "#a9c1e6", r: "Horizon, drifts" },
+    { n: "Frost white", h: "#dce8f8", r: "Snow highlights" },
+    { n: "Star gold", h: "#e0a42b", r: "The one warm light" },
+    { n: "Lamp amber", h: "#f3c98b", r: "Window and bokeh" },
+    { n: "Line brown", h: "#6b3f17", r: "Tinted outlines" },
+    { n: "Wood", h: "#c58a45", r: "Bird fill" }
+  ];
+  function lum(h) { var r = parseInt(h.substr(1, 2), 16), g = parseInt(h.substr(3, 2), 16), b = parseInt(h.substr(5, 2), 16); return (0.299 * r + 0.587 * g + 0.114 * b) / 255; }
+  function copyText(text, btn, okLabel) {
+    var done = function (ok) { if (!btn) return; var old = btn.getAttribute("data-label") || btn.textContent; btn.setAttribute("data-label", old); btn.textContent = ok ? okLabel : "Select and copy manually"; setTimeout(function () { btn.textContent = old; }, 1600); };
+    try {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, function () { fallback(); });
+    } catch (e) { fallback(); }
+    function fallback() {
+      try {
+        var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta); ta.select(); var ok = document.execCommand("copy"); document.body.removeChild(ta); done(ok);
+      } catch (e2) { done(false); }
+    }
+  }
+  var swBox = document.getElementById("swatches");
+  SW.forEach(function (s) {
+    var b = document.createElement("button"); b.type = "button"; b.className = "sw"; b.setAttribute("aria-label", "Copy " + s.n + " " + s.h);
+    var chip = document.createElement("div"); chip.className = "chip"; chip.style.background = s.h; chip.style.color = lum(s.h) > 0.55 ? "#111" : "#fff"; chip.textContent = s.h;
+    var meta = document.createElement("div"); meta.className = "meta"; meta.innerHTML = "<b></b><span></span>"; meta.firstChild.textContent = s.n; meta.lastChild.textContent = s.r;
+    b.appendChild(chip); b.appendChild(meta);
+    b.addEventListener("click", function () { copyText(s.h, chip, "Copied"); });
+    swBox.appendChild(b);
+  });
+
+  /* ---------- prompts ---------- */
+  var PROMPTS = [
+    { t: "1. Background plate", tag: "Still image only, if allowed", x:
+"Painted background plate, winter night in a 1940s European city, gouache and watercolor on textured paper, broad visible brush streaks, icy ultramarine to deep navy sky, soft pale-blue snow drifts, one warm golden light source, small glowing string-light bokeh, muted mid-tones, subtle paper grain and vignette, flat 2D, hand-painted, no characters, no text, no lettering, 16:9." },
+    { t: "2. Character style notes", tag: "Art direction for hand or code drawing", x:
+"Original character: a small carved wooden bird, toy-like, slightly oversized head.\nFlat cel colors, one fill per shape, almost no shading.\nOutline is a thin warm-brown line, a darker tint of each fill, never pure black, slightly irregular.\nCaricature proportions: big round eye, short sharp beak, chunky body, thin legs.\nBuilt from separate cut-out parts: body, head, wing, tail, legs, each with its own pivot.\nHold each drawing for two frames; re-jitter the outline on every drawing." },
+    { t: "3. Avoid list", tag: "Negative prompt, if image generation is used", x:
+"3D render, CGI, glossy plastic, anime, cel-shaded video-game look, pure black outlines, photoreal lighting, lens flare, text, logos, watermark, existing film characters, celebrity likeness, brand marks." },
+    { t: "4. Code art brief", tag: "For our own PIL / canvas pipeline", x:
+"Render at 1920x1080, 24 fps, held on twos (12 unique drawings per second).\nLayers back to front: sky plate (gradient + directional streak strokes, rotated about -12 degrees, alpha 0.05 to 0.14, light and dark), snow drifts, ledge, character parts, warm additive glow, bokeh, snow particles, grain (looping noise tile at a random offset per frame), vignette.\nOutlines: polygon points with 1 to 2 px jitter, reseeded per drawing, stroke = fill darkened 45%.\nCamera: locked. Change comes only from light, weather, props and time of day.\nFinal grade in ffmpeg: slight teal in shadows, warm highlights, grain 8%." }
+  ];
+  var pl = document.getElementById("promptlist");
+  PROMPTS.forEach(function (p) {
+    var d = document.createElement("div"); d.className = "card prompt";
+    var h = document.createElement("header");
+    var left = document.createElement("div"); var h3 = document.createElement("h3"); h3.textContent = p.t; var tag = document.createElement("span"); tag.className = "tag"; tag.textContent = p.tag;
+    left.style.cssText = "display:flex;flex-wrap:wrap;gap:10px;align-items:center"; left.appendChild(h3); left.appendChild(tag);
+    var btn = document.createElement("button"); btn.type = "button"; btn.textContent = "Copy"; btn.addEventListener("click", function () { copyText(p.x, btn, "Copied"); });
+    h.appendChild(left); h.appendChild(btn);
+    var pre = document.createElement("pre"); pre.textContent = p.x;
+    d.appendChild(h); d.appendChild(pre); pl.appendChild(d);
+  });
+
+  /* ---------- canvas lab ---------- */
+  var W = 640, H = 360;
+  var cv = document.getElementById("stage"); cv.width = W; cv.height = H;
+  var ctx = cv.getContext("2d");
+  var on = {}; Array.prototype.forEach.call(document.querySelectorAll("#toggles input"), function (i) { on[i.getAttribute("data-k")] = i.checked; i.addEventListener("change", function () { on[i.getAttribute("data-k")] = i.checked; if (!playing) draw(); }); });
+  function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+  var bgPaint = document.createElement("canvas"), bgFlat = document.createElement("canvas");
+  bgPaint.width = bgFlat.width = W; bgPaint.height = bgFlat.height = H;
+  function drift(g, y0, amp, col, r) {
+    g.fillStyle = col; g.beginPath(); g.moveTo(0, H);
+    g.lineTo(0, y0);
+    for (var x = 0; x <= W; x += 80) { g.quadraticCurveTo(x + 40, y0 - amp * (0.4 + r() * 0.8), x + 80, y0 + (r() - 0.5) * amp * 0.6); }
+    g.lineTo(W, H); g.closePath(); g.fill();
+  }
+  function buildBg(seed) {
+    [bgFlat, bgPaint].forEach(function (c, idx) {
+      var g = c.getContext("2d"), r = rng(seed);
+      var gr = g.createLinearGradient(0, 0, 0, H);
+      gr.addColorStop(0, "#0f1d44"); gr.addColorStop(0.55, "#2a4a8f"); gr.addColorStop(1, "#a9c1e6");
+      g.fillStyle = gr; g.fillRect(0, 0, W, H);
+      if (idx === 1) {
+        for (var i = 0; i < 300; i++) {
+          var x = r() * W * 1.3 - 80, y = r() * H * 0.85, len = 70 + r() * 230, th = 2.5 + r() * 13, light = r() > 0.5;
+          g.save(); g.translate(x, y); g.rotate(-0.22 + (r() - 0.5) * 0.14);
+          g.globalAlpha = 0.05 + r() * 0.1; g.fillStyle = light ? "#9db9ea" : "#0b1636";
+          g.beginPath(); g.ellipse(0, 0, len, th, 0, 0, Math.PI * 2); g.fill(); g.restore();
+        }
+      }
+      g.globalAlpha = 1;
+      drift(g, H * 0.8, 26, "#b9cdee", r);
+      drift(g, H * 0.86, 20, "#dce8f8", r);
+      if (idx === 1) {
+        for (var k = 0; k < 90; k++) {
+          g.save(); g.translate(r() * W, H * 0.78 + r() * H * 0.22); g.rotate(-0.1);
+          g.globalAlpha = 0.08 + r() * 0.08; g.fillStyle = r() > 0.5 ? "#ffffff" : "#8fa9d6";
+          g.beginPath(); g.ellipse(0, 0, 30 + r() * 70, 2 + r() * 4, 0, 0, Math.PI * 2); g.fill(); g.restore();
+        }
+      }
+    });
+  }
+  var grainTile = document.createElement("canvas"); grainTile.width = grainTile.height = 160;
+  (function () { var g = grainTile.getContext("2d"), d = g.createImageData(160, 160), r = rng(99); for (var i = 0; i < d.data.length; i += 4) { var v = r() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 46; } g.putImageData(d, 0, 0); })();
+  var grainPat = ctx.createPattern(grainTile, "repeat");
+
+  var flakes = [], fr = rng(5);
+  for (var f = 0; f < 90; f++) flakes.push({ x: fr() * W, y: fr() * H, s: 1 + fr() * 2.4, v: 0.8 + fr() * 1.8, d: (fr() - 0.5) * 0.8 });
+  var bokeh = []; var br = rng(11);
+  for (var b = 0; b < 16; b++) bokeh.push({ x: W * 0.62 + br() * W * 0.38, y: 20 + br() * H * 0.55, r: 3 + br() * 8, p: br() * 6.28, c: br() > 0.5 ? "#f3c98b" : "#cfe0ff" });
+
+  var frame = 0, tsec = 0;
+  function part(cx, cy, rx, ry, rot, seed, fill) {
+    var n = 26, r = rng(seed * 977 + frame * 131);
+    ctx.beginPath();
+    for (var i = 0; i < n; i++) {
+      var a = i / n * Math.PI * 2, j = on.wobble ? 1 + (r() - 0.5) * 0.09 : 1;
+      var x = Math.cos(a) * rx * j, y = Math.sin(a) * ry * j;
+      var X = cx + x * Math.cos(rot) - y * Math.sin(rot), Y = cy + x * Math.sin(rot) + y * Math.cos(rot);
+      if (i === 0) ctx.moveTo(X, Y); else ctx.lineTo(X, Y);
+    }
+    ctx.closePath(); ctx.fillStyle = fill; ctx.fill();
+    ctx.lineWidth = 2.4; ctx.lineJoin = "round"; ctx.strokeStyle = on.outline ? "#6b3f17" : "#000"; ctx.stroke();
+  }
+  function poly(pts, seed, fill) {
+    var r = rng(seed * 733 + frame * 131); ctx.beginPath();
+    pts.forEach(function (p, i) { var jx = on.wobble ? (r() - 0.5) * 2.4 : 0, jy = on.wobble ? (r() - 0.5) * 2.4 : 0; if (i === 0) ctx.moveTo(p[0] + jx, p[1] + jy); else ctx.lineTo(p[0] + jx, p[1] + jy); });
+    ctx.closePath(); ctx.fillStyle = fill; ctx.fill(); ctx.lineWidth = 2.4; ctx.lineJoin = "round"; ctx.strokeStyle = on.outline ? "#6b3f17" : "#000"; ctx.stroke();
+  }
+  function bird(x, y, t) {
+    var bob = Math.sin(t * 1.6) * 1.6, tilt = Math.sin(t * 0.9) * 0.05, flap = Math.sin(t * 2.2) * 0.08;
+    ctx.save(); ctx.translate(x, y + bob); ctx.rotate(tilt);
+    ctx.strokeStyle = on.outline ? "#6b3f17" : "#000"; ctx.lineWidth = 3; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(-6, -16); ctx.lineTo(-8, 2); ctx.moveTo(8, -16); ctx.lineTo(10, 2); ctx.stroke();
+    poly([[-30, -40], [-70, -64], [-62, -36], [-32, -26]], 3, "#a97235");
+    part(0, -38, 34, 25, -0.15, 1, "#c58a45");
+    part(30, -66 + Math.sin(t * 1.6 + 0.6) * 1.2, 16, 15, 0, 2, "#c58a45");
+    poly([[44, -69], [62, -63], [44, -58]], 4, "#e0a42b");
+    ctx.fillStyle = "#14203a"; ctx.beginPath(); ctx.arc(34, -70, 2.8, 0, 7); ctx.fill();
+    part(-4, -38, 20, 11, -0.35 + flap, 5, "#dba160");
+    ctx.restore();
+  }
+  function draw() {
+    ctx.globalCompositeOperation = "source-over"; ctx.globalAlpha = 1;
+    ctx.drawImage(on.paint ? bgPaint : bgFlat, 0, 0);
+    // night clouds drifting (weather change)
+    var cx = ((tsec * 6) % (W + 300)) - 150;
+    ctx.fillStyle = "rgba(10,20,50,0.10)"; ctx.beginPath(); ctx.ellipse(cx, 70, 150, 22, -0.1, 0, 7); ctx.fill();
+    if (on.glow) {
+      ctx.globalCompositeOperation = "lighter";
+      var pulse = 0.85 + Math.sin(tsec * 1.3) * 0.08;
+      var gl = ctx.createRadialGradient(60, 300, 10, 60, 300, 340);
+      gl.addColorStop(0, "rgba(255,196,110," + (0.55 * pulse) + ")"); gl.addColorStop(1, "rgba(255,196,110,0)");
+      ctx.fillStyle = gl; ctx.fillRect(0, 0, W, H);
+      ctx.globalCompositeOperation = "source-over";
+    }
+    // ledge
+    ctx.fillStyle = "#5a3a1e"; ctx.fillRect(210, 292, 250, 16);
+    ctx.lineWidth = 2.4; ctx.strokeStyle = on.outline ? "#2c1807" : "#000"; ctx.strokeRect(210, 292, 250, 16);
+    ctx.fillStyle = "#dce8f8"; ctx.fillRect(214, 288, 70, 5);
+    bird(340, 292, tsec);
+    if (on.snow) {
+      ctx.fillStyle = "rgba(255,255,255,0.85)";
+      flakes.forEach(function (fl) { ctx.beginPath(); ctx.arc(fl.x, fl.y, fl.s, 0, 7); ctx.fill(); });
+    }
+    if (on.bokeh) {
+      ctx.globalCompositeOperation = "lighter";
+      bokeh.forEach(function (o) { var a = 0.35 + 0.3 * Math.sin(tsec * 1.8 + o.p); ctx.globalAlpha = a; ctx.fillStyle = o.c; ctx.beginPath(); ctx.arc(o.x, o.y, o.r, 0, 7); ctx.fill(); });
+      ctx.globalAlpha = 1; ctx.globalCompositeOperation = "source-over";
+    }
+    if (on.grain) {
+      ctx.save(); ctx.translate((frame * 37) % 160, (frame * 61) % 160); ctx.fillStyle = grainPat; ctx.globalAlpha = 0.55;
+      ctx.fillRect(-160, -160, W + 320, H + 320); ctx.restore(); ctx.globalAlpha = 1;
+    }
+    if (on.vig) {
+      var v = ctx.createRadialGradient(W / 2, H / 2, H * 0.35, W / 2, H / 2, W * 0.65);
+      v.addColorStop(0, "rgba(5,10,30,0)"); v.addColorStop(1, "rgba(5,10,30,0.55)"); ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+    }
+  }
+  function step() {
+    frame++; tsec += 1 / (+fpsSel.value);
+    flakes.forEach(function (fl) { fl.y += fl.v * 24 / (+fpsSel.value); fl.x += fl.d * 24 / (+fpsSel.value); if (fl.y > H) { fl.y = -4; fl.x = Math.random() * W; } });
+    draw();
+  }
+  var fpsSel = document.getElementById("fps"), playBtn = document.getElementById("play");
+  var reduce = false; try { reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+  var playing = !reduce, last = 0;
+  function loop(ts) { if (playing && ts - last >= 1000 / (+fpsSel.value)) { last = ts; step(); } requestAnimationFrame(loop); }
+  playBtn.textContent = playing ? "Pause" : "Play";
+  playBtn.addEventListener("click", function () { playing = !playing; playBtn.textContent = playing ? "Pause" : "Play"; });
+  document.getElementById("reseed").addEventListener("click", function () { buildBg((Math.random() * 1e6) | 0); draw(); });
+  buildBg(7); draw(); requestAnimationFrame(loop);
+})();
+</script>

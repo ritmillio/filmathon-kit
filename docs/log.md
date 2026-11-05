@@ -291,3 +291,8 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Team: the old bear in the last scenes is "still fat". Redone with a slim old bear (thin limbs, small belly, same head, patches and stitched seam): stage 6 `s06_v6` (rises from the armchair, walks past the bed, climbs to the sill) and the ending `s7_v6_a/b` (climbs onto the bed, one arm toward the lamp, falls asleep, lamp out, fade). Frames checked: the bear stays small and slim; the end frame E of the ending still reads close to v4 (only head and one arm visible under the blanket).
 - `scripts/make_film.py` now points to the v6 clips. `exports/film_v5_silent.mp4` (57.0 s) -> final `exports/final/teamname_lifetimeinonelittleroom.mp4` (60.5 s: film + pure-black chalk title card + the team's music, 1920x1080, 24 fps, H.264 + AAC).
 - Balance: $N credits.
+
+### 22:36 · FINAL v6: short arm in the goodnight reach
+- Team: everything perfect; only fix the bear's arm length in the last scene's reach toward the lamp (it stretched to about three times its length). Regenerated only the ending's second clip (`s7_v7_b`, prompt `docs/prompts/s7_v7_b_clip.txt` with an explicit short-stubby-arm rule; start `stills/s7_v6_E.jpg`, end `stills/s7_v6_dark.jpg`). Checked at full size: the arm is a normal short forearm raised from the elbow; the rest of the film is unchanged.
+- `scripts/make_film.py` now uses `s7_v7_b`. Final `exports/final/teamname_lifetimeinonelittleroom.mp4` rebuilt (60.5 s, 1920x1080, 24 fps, H.264 + AAC, pure-black chalk title card, the team's music).
+- Balance: $N credits.

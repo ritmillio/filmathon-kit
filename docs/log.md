@@ -48,6 +48,11 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Added `CLAUDE.md` (standing rules, including push regularly and log everything), `scripts/save.sh` (commit and push with a secret and size check) and this log.
 - The team's local `.gitignore` change (`/.env.local`, written by `elevenlabs onboard`) was included.
 
+### ~19:30 · First push to `main`
+- Pushed commit `206d516` to the private repo `ritmillio/filmathon-kit` (no branches, straight to `main`, as the team asked). Verified on GitHub: the new files are there, and no `.env`, `.mcp.json`, media or key files are in the tree.
+- A bug in `scripts/save.sh` made the first run exit silently without committing (a size check returned a false status under `set -e`). Fixed, then pushed.
+- From now on: `scripts/save.sh "message"` after every meaningful change, plus a dated entry in this log.
+
 ## Open questions
 
 1. **ElevenLabs:** is the MCP connected, and does it expose image and video, or only audio? If not, generate stills and clips in the web app.

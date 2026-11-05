@@ -251,3 +251,14 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 
 ### 21:57 · Revision brief v4 (continuity pass) received
 - Saved as `docs/revision_brief_v4.md`, specs `docs/stage_specs_v4.md`: one recurring armchair (the stage 5 design, right front corner, in every stage except 4); the same bear everywhere at the same size; no confetti or sparkles; stage 1 simplified (bear climbs down, goes straight to the crib, peeks in); stage 2 softer bed entry; stage 3 simple lamp and soft blue tears generated directly; stage 4 the departing figure visible from the start; stage 5 unchanged; stage 6 the old bear walks from the armchair to the window; stage 7 consistent bear size, natural blanket, the goodnight reach, falling asleep. Smoother transitions: short dissolves added in the edit.
+
+### 22:05 · Ending as a jazz funeral (46-52 s), three takes
+- Team asked for the ending to follow a passing life ("more feral", read as funeral). Re-made only S8: slow 46 bpm New Orleans funeral dirge, instruments leaving one by one until a single clarinet note rings out. Three takes `audio/jazz5/s8_t1-3.mp3`; sections 1-7 are the glued version B. Outputs `exports/film_v2_funeral_end1-3.mp4`. Not listened to. Nothing committed.
+
+### 21:58 · HANDOFF STATE (written before a context compact)
+- **Deadline 22:30 CET Nov 5.** Safety net: `exports/film_v3_silent.mp4` (60 s, silent, complete), live copy https://a-life-in-one-room.vercel.app (light copy in the session scratchpad `share/`, redeploy with the same command if a new cut is made).
+- **In progress (6 subagents, launched ~21:57, no git, silent):** stage 1 `s01_v4`, stage 2 `s02_v4`, stage 3 `s03_v4`, stage 4 `s04_v4`, stage 6 `s06_v5`, ending `s7_v4` (two clips a and b). Specs: `docs/stage_specs_v4.md`, brief `docs/revision_brief_v4.md`. Stage 5 stays `exports/s05_v2_silent.mp4` (unchanged on purpose).
+- **Final files to join (in order, each `exports/<prefix>_silent.mp4`):** s01_v4, s02_v4, s03_v4, s04_v4, s05_v2, s06_v5, s7_v4_a, s7_v4_b. Join with **0.5 s dissolves** (ffmpeg xfade) between scenes for smoother transitions, but keep the two ending clips joined as one continuous scene. Output `exports/film_v4_silent.mp4`. For any stage whose v4 clip fails, fall back to the v3 clip: s01_v3, s02_v3, s03_v3_blue, s04_v2, s06_v4, s78_v3_a/b (all in `exports/`).
+- **Checks per clip (look at `stills/<prefix>_check.png`):** same bear size, armchair at the right front corner in every stage except 4, no sparkles or confetti, nothing pops in, lamp pole straight.
+- **Open decisions:** sound (the kit needs an audio track; the team paused it; a fallback is the generated music `audio/music.wav` laid under the cut, no effects, only on the team's yes); the team name for `teamname_filmtitle.mp4`; the final export must be 1920x1080 at 24 fps with audio, MP4.
+- Balance about 357,000 of 610,000 used at 21:34 (counter lags; subagent retries add up).

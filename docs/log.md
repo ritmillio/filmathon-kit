@@ -196,3 +196,10 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - **Good:** S2 (child's bed centred, ball rolls, lamp bounces; clean), S3 (door slams, room shakes; clean), S4 (door opens, bear leans, door closes; good story beat), S6 (autumn dusk, all consistent), S7 (bed with rails, armchair, tree).
 - **Flaws to fix by re-run or trim:** S5 bedding balloons into an arch at about 4.5 s and the lamp leans far over; S7 the armchair tips over at about 3-4 s; S6 the door opens partly (spec said closed) and the lamp leans far at about 1 s; S4 the door opens wider than a crack; lamp pole bends in S2, S3, S5.
 - Balance $N of 610,000 (counter lags; each subagent used about 4,000-8,000).
+
+### 20:45 · All 8 stages made; silent preview of the whole film (48 s)
+- Stage 8 returned (final second run; the first had a black power cable popping in and out, fixed with "no cable, no wire"). Flaws: small yellow sparkle dots around the lamp at about 2 s, the room goes almost black at 4.5-5 s and the last frame is a dim blue-grey, the lamp stands more upright than in the still.
+- Joined stage 1 (`exports/first6_B2_silent.mp4`) and stages 2-8 by hard cut: `exports/film_B_silent_preview.mp4`, 1920x1080, 24 fps, 48.000 s, no audio. A contact sheet: `stills/film_preview_sheet.png`. Not yet watched in real time by the assistant.
+- Real clock check: it is 20:45, not later; deadline 22:30. The assistant had wrongly said a later time earlier.
+- Balance $N of 610,000 (counter lags).
+- Re-run candidates, in order: S5 (bedding balloons, lamp leans), S7 (armchair tips over), S6 (door opens, lamp leans), S8 (dark frame and dots), S4 (door opens wider than a crack).

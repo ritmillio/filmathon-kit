@@ -275,3 +275,10 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Known flaws: lamp pole bends or tilts in stages 2, 3, 4; the door swings wider than planned in stage 3 and stage 2; the bear looks a little bigger when it stretches toward the lamp.
 - Balance $N of 610,000 (counter lags). Web copy (30 MB) prepared; the team runs the deploy command to update the link.
 - Still open: audio track (the kit needs one; the team paused sound), the team name for the file, the final MP4 export.
+
+### 22:30 · Teen section (14-20 s) made smoother
+- Team: ending (lullaby) is good; the teen music stands out from everything else. Re-generated only S3 at the same 100 bpm with a smooth, warm, no-distortion, legato prompt: `audio/jazz7/s3_t1-3.mp3`. Rest = glued B with the lullaby ending. Outputs `exports/film_v2_teen_smooth1-3.mp4`. Not listened to. Nothing committed.
+
+### 22:17 · FINAL EXPORT
+- `exports/final/teamname_lifetimeinonelittleroom.mp4` (**rename teamname to the real team name**): film v4 (57.0 s) + a black chalk-writing title card "lifetime in one little room" (generated with `gpt-image-2.5-sunburst` via ElevenLabs, `docs/prompts/title_card.txt`, 4.5 s, 1 s fade from the film) + the team's music `exports/film_v2_teen_smooth1.mp4` (52 s audio, 2.5 s fade-out at 49.5 s, then silence). 1920x1080, 24 fps, H.264 + AAC, 60.5 s.
+- **To confirm by the team:** that `film_v2_teen_smooth1.mp4`'s music was generated in ElevenLabs (the rules count only ElevenLabs audio); the bear "slightly older" change for stages 6-8 was NOT regenerated (no time).

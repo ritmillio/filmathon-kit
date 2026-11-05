@@ -203,3 +203,8 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Real clock check: it is 20:45, not later; deadline 22:30. The assistant had wrongly said a later time earlier.
 - Balance $N of 610,000 (counter lags).
 - Re-run candidates, in order: S5 (bedding balloons, lamp leans), S7 (armchair tips over), S6 (door opens, lamp leans), S8 (dark frame and dots), S4 (door opens wider than a crack).
+
+### 20:56 · Model comparison for stage 1; app-only models found
+- Team asked for the first 6 s on other models (Kling, MiniMax) and a more creative animation. **Kling is not in the ElevenLabs API** (checked the live spec: no kling, minimax, flux, omni; the docs snapshot says they are app-only). The team's screenshots show Kling 4.0, MiniMax H3/H3 Max, FLUX 3, Gemini Omni Flash and Seedance 2.5 **inside the ElevenLabs web app**, so they are part of the package and eligible. Seedance 2.5 still returns `model_access_denied` through the API (retested). No outside service is used.
+- Rewrote the clip prompt as a more creative acting script (`docs/prompts/clip_B2_creative.txt`). Ran Veo 3.1 standard and Fast on the same start and end frames. Standard: dust in the beam, bear shiver, wake-up stretch and a wink; flaws: the shade morphs into a small creature for a moment, the bear tips over. Fast: a brown blob character pops in; rejected.
+- Wrote `docs/app_models_guide.md` and a hand-off pack `exports/for_app/` (start frame, end frame, prompt) so the team can generate Kling, MiniMax, Seedance and Omni in the app and compare. Not yet done by the team.

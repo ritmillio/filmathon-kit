@@ -78,6 +78,13 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - **MCP status:** configured in `.mcp.json` (git-ignored) with the verified key, and `claude mcp list` shows it as **Pending approval**. Nothing has been called through it yet. To activate: run `claude` in `~/Developer/filmathon-kit`, approve the project server, then check `/mcp`. The server package was downloaded once to warm the cache.
 - **Resolution rule (team decision):** deliver **1920x1080 at 24 fps**, no 4K, no upscaling. Written into `DESIGN.md`, `CLAUDE.md` and `docs/elevenlabs-generation.md`. The kit recommends 1920x1080 (minimum 1280x720) and says 4K upscaling is not worth it. It does not state a hard maximum, so this is our rule, not a quoted competition limit.
 
+### ~20:20 · First Figma board received: characters
+- File `characters figma.svg` (a 485 x 485 board with five embedded images). Checked first: no scripts, no external links. Stored in `assets/references/figma/boards/characters/exports/` (**not committed**: third-party images). The five images were extracted to `char_01.png` to `char_05.png`.
+- The board shows five classic feature-animation characters that are living household objects. Notes written in our own words with no names (`assets/references/figma/boards/characters/notes.md`), index rows R01 to R05.
+- **Most useful for us:** R04, life without a face through posture, which is our own rule. Also: faces sit in the object's form, limbs are the object's own parts, relationships between objects.
+- **Risk noted:** our idea (living household objects) is close to these characters. Added distance rules to the notes: keep our two-dot faces, no lashes or eyebrows, no hands or costumes, our own palette and scribbly outline, mostly passive objects, and never use these images as generator references.
+- Nothing from this board has reached a prompt yet. Qualities become part of the STYLE line only after the team approves them.
+
 ## Open questions
 
 1. **ElevenLabs:** key verified (Pro, 610,000 credits). Image and video exist in the API (see `docs/elevenlabs-generation.md`). After a restart, does the MCP expose them? If not, call the API or use the web app.

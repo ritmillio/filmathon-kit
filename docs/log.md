@@ -133,3 +133,12 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - **Shot 2** (3-6 s): standard Veo 3.1 `shots/s02_veo_std.mp4` approved: the mobile stays above the cradle, the lamp blinks, the room holds.
 - **Cut:** `exports/first6_veo31_with_sound.mp4`, 1920x1080, 24 fps, 6.000 s, with the first 6 s of the real mix (placeholder gone). Not yet reviewed by a person in real time.
 - **Credits:** balance 32,781 of 610,000 after the standard shot 1 run and the shot 2 clip. A standard 1080p 4 s clip costs about 4,800.
+
+### 20:10 · Redo of the first 6 s: why v1 failed, and v2 (continuous, on-style)
+- **Time correction:** the real clock at this point is about 20:00 CET. Earlier log times ("21:30", "22:05") were the assistant's estimates and were wrong. Deadline 22:30 stands.
+- **Why v1 failed (team feedback):** a visible cut between the two clips; characters lifeless; style far from `DESIGN.md`. **Causes found:** (1) the stills used a shorter style line than the DESIGN prefix, with no "palette only" and no ban on gradients, so they came out glossy with glow, bloom, purple and pink; (2) clips used "one small motion", which reads as dead; (3) two separate clips joined by a hard cut, per the old "change by cutting" rule.
+- **Decision (team):** for the opening, the change happens **inside one continuous clip**. The old rule "change by cutting, one small motion" is relaxed for S1. Other stages to be decided after this test.
+- **v2 method:** full DESIGN style prefix word for word plus "no gradients, no glow, no bloom, no purple, no pink"; stills `stills/g1v2.jpg` (base room, approved) and `stills/s2v2.jpg` (end state, approved), 1K; one Veo 3.1 clip, **start frame + end frame**, 6 s, with a timed acting script from the character files (squash and stretch, anticipation, hop). Post: held on twos (12 fps to 24) as `DESIGN.md` requires.
+- **Result (Fast model test):** much closer to the design (flat, in palette). Characters now act: the lamp hops, the cradle pops in, the bear drops onto the sill. Problems: the "door light" became a big amber slab, the cradle morphs messily when it first appears (about 2-3 s), the bear flops over mid-clip, the lamp grew thin spring legs. `shots/first6_fast.mp4`, cut `exports/first6_v2_continuous_fast.mp4` with the real sound mix.
+- **Credits:** counter 41,289 of 610,000 after two stills and one 6 s Fast clip (the counter lags; costs per item not measured).
+- **Open:** the team's "extended story line" message arrived with no file attached; waiting for the path.

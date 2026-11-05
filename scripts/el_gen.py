@@ -16,7 +16,7 @@ def call(method,url,body=None):
 a=argparse.ArgumentParser()
 a.add_argument('kind'); a.add_argument('out'); a.add_argument('--model',required=True)
 a.add_argument('--prompt-file',required=True); a.add_argument('--ref',action='append',default=[])
-a.add_argument('--start'); a.add_argument('--secs',type=int,default=5); a.add_argument('--res')
+a.add_argument('--start'); a.add_argument('--end'); a.add_argument('--secs',type=int,default=5); a.add_argument('--res')
 a=a.parse_args()
 b={'model_id':a.model,'prompt':open(a.prompt_file).read().strip(),'aspect_ratio':'16:9'}
 if a.kind=='image':
@@ -25,6 +25,7 @@ if a.kind=='image':
 else:
     b['duration_secs']=a.secs; b['resolution']=a.res or '1080p'; b['generate_audio']=False
     if a.start: b['start_frame']=ref(a.start)
+    if a.end: b['end_frame']=ref(a.end)
     if a.model.startswith('veo'):
         b['negative_prompt']='people, hands, faces, text, camera movement, zoom, pan, new objects, 3D render, photoreal'
 base='https://api.elevenlabs.io/v1/flows/'+a.kind

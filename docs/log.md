@@ -153,3 +153,10 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Team: sketches are only for what each character is; redesign freely with the craft elements. Test sheet `stills/chars_v3.png` (Lamp, Bear, Mug), one 1K still, 3,045 credits (41,289 -> 44,334). Reads as the sketch idea with much more appeal. Not yet approved by the team.
 - `DESIGN.md` Style DNA and `SOUND.md` marked superseded and paused with pointers. Credit costs measured: still about 3,000; Fast 6 s about 2,400; standard 4 s about 4,800.
 - Open: team approval of the character look (button eyes on the Bear or soulful eyes?), curtains on the window (the references frame the window with cloth).
+
+### 20:13 · Style v3 working: GPT image 2.5 inside ElevenLabs
+- Team feedback: the first v3 test was "not close to Disney style"; generate images first; use GPT image 2.5, with a key from an AI gateway in another project. **Declined the outside key** (eligibility: only the ElevenLabs package counts; the assistant did not open the other project). GPT image 2.5 exists inside ElevenLabs (`gpt-image-2.5-flare`, `-sunburst`, `gpt-image-2`) and works with our key.
+- Reviewed the character images at full size again: faces and arms are sculpted from the object itself; rendered gloss; ornament. Rewrote the prompt object-first.
+- Results (silent, stills only): `stills/chars_v4.png` (Lamp, Bear, Mug), `stills/room_v4.jpg` (empty room on the sketch layout, curtains added), `stills/end_v4.jpg` (room with lamp, bear, cradle, warm light from the right). Much closer to the references. **Awaiting team approval.**
+- Cost: character sheet about 920, room 2K about 520, end frame about 500. Balance 45770 of 610,000 used.
+- Next (after approval): one Fast 6 s clip from `room_v4` to `end_v4` (start and end frame), then standard only if it passes. No sound.

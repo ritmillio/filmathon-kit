@@ -43,10 +43,16 @@ The three still read as the sketches' idea (tall lamp with a pull chain and trap
 Take **craft**, never **content**: no studio or film names in prompts, no character, prop or frame from the references, no uploading their images to the generator. We describe qualities in words.
 
 ## Credit discipline (the team asked not to burn credits)
-Measured today (balance counter lags a little): one 1K still about 3,000; one 6 s Fast clip about 2,400; one 4 s standard clip about 4,800 (a 6 s standard clip about 7,000).
+Measured today (balance counter lags a little): one 1K Gemini still about 3,000 (use GPT image 2.5 instead, see the update at the end: about 520-920); one 6 s Fast clip about 2,400; one 4 s standard clip about 4,800 (a 6 s standard clip about 7,000).
 Process, in this order, and stop at any failed gate:
 1. Style test on **one still** (done: characters).
 2. Base room still in style v3, check against the sketch overlay.
 3. End-state still with the new characters.
 4. **One Fast 6 s clip** as the motion test. Only if it passes, one standard clip for the final.
 Never run two paid generations in parallel on an unapproved look.
+
+## Update 20:13: what actually works (tested)
+- **Model for stills: `gpt-image-2.5-flare`** (the GPT image model hosted **inside ElevenLabs**, same key, eligible). Much better than `gemini-3-pro-image` for this look, and cheaper: about 900 credits for a 1K character sheet and about 520 for a 2K room, against about 3,000 for a Gemini 1K still. Params: `quality` defaults to high, `resolution` 1K or 2K, up to 10 reference images.
+- **Do not use outside generators** (for example an AI gateway key from another project): the competition counts only the ElevenLabs package. GPT image 2.5 is available through ElevenLabs, so nothing outside is needed.
+- **The lesson from the references:** design the character **object first**. The face is sculpted into the object's form (shade pleats become brows and eyelids, a fabric fold is the nose, the mug's rim is the brow and its handle is an arm), arms come from the object's own parts (a brass neck, a cord, a handle) with a tiny hand-like finial, and surfaces are rendered (brass gloss, glaze highlights, fur and seams). A flat cartoon face stuck on an object looks like clip-art (that was the first test).
+- **Approved candidates (awaiting team yes):** `stills/chars_v4.png` (character sheet), `stills/room_v4.jpg` (empty room, with floral curtains), `stills/end_v4.jpg` (room with lamp, bear and cradle). Order that works: room still from the sketch, character sheet, then the end-state still using the room and the sheet as references.

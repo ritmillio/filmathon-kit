@@ -18,7 +18,7 @@ All of these are hosted inside ElevenLabs, so using them keeps us on the one-too
 ## How we would use it (from the skill reference, to confirm with a first test)
 
 - **Stills:** an image model, 16:9, with the room sketch and the item sketches as references (several references are allowed per image). Send a reference inline (base64) or store it as an asset.
-- **Clips:** a video model with `startFrame` set to the approved still, 4 to 8 seconds, 16:9, 1080p, and a negative prompt. **Native clip audio off** (our sound is made separately).
+- **Clips:** a video model with `startFrame` set to the approved still, 4 to 8 seconds, 16:9, **1080p (never 4K; our delivery is 1920x1080 at 24 fps)**, and a negative prompt. For stills use 1K or 2K, never 4K. **Native clip audio off** (our sound is made separately).
 - **Chaining:** a video request can point at a still that is still pending, so we do not have to wait.
 - **Polling:** images every 2 s or more, video every 10 s or more. Output links expire after about an hour, so download the file straight away into `stills/` or `shots/`.
 - Failed generations are not charged.

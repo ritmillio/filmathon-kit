@@ -9,6 +9,7 @@ Read with `STORY.md` (what happens) and `SOUND.md` (how it sounds). The visual r
 - **Image, video, audio and music only from the ElevenLabs Pro package** to be prize-eligible.
 - **Team rule: ElevenLabs is the only generation tool on this project.** No other generator, no extra credits.
 - **File:** MP4, 16:9, 24 fps, 1920x1080 recommended (1280x720 minimum), audio in the file, named `teamname_filmtitle.mp4` (lowercase letters and digits).
+- **Team rule on resolution: we deliver 1920x1080 at 24 fps. No 4K, and no upscaling to 4K.** Ask the generators for 1080p and nothing higher. (The kit's own advice is the same: upscaling is not worth the time or credits.)
 - **Time:** submission 22:30 sharp (aim for 22:15). Working export by 21:45.
 - **Judged on:** story, visual world, film language, sound, AI use.
 - No real brands, characters or politics. Avoid text in shots (AI text garbles).

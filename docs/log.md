@@ -74,6 +74,10 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - **Confirmed against ElevenLabs' live API spec:** image and video generation exist (`/v1/flows/image`, `/v1/flows/video`) with several hosted models and a start-frame option. Written up in `docs/elevenlabs-generation.md`. This answers the earlier open question about image and video.
 - **Not yet tested:** our key's Flows permission, credit cost per generation, and which model holds the room best. First test is described in that file.
 
+### ~20:10 · ElevenLabs MCP status, and the resolution rule
+- **MCP status:** configured in `.mcp.json` (git-ignored) with the verified key, and `claude mcp list` shows it as **Pending approval**. Nothing has been called through it yet. To activate: run `claude` in `~/Developer/filmathon-kit`, approve the project server, then check `/mcp`. The server package was downloaded once to warm the cache.
+- **Resolution rule (team decision):** deliver **1920x1080 at 24 fps**, no 4K, no upscaling. Written into `DESIGN.md`, `CLAUDE.md` and `docs/elevenlabs-generation.md`. The kit recommends 1920x1080 (minimum 1280x720) and says 4K upscaling is not worth it. It does not state a hard maximum, so this is our rule, not a quoted competition limit.
+
 ## Open questions
 
 1. **ElevenLabs:** key verified (Pro, 610,000 credits). Image and video exist in the API (see `docs/elevenlabs-generation.md`). After a restart, does the MCP expose them? If not, call the API or use the web app.

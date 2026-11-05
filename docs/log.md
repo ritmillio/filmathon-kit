@@ -224,3 +224,6 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 ### 21:23 · Revision brief v3 received (second revision)
 - Saved as `docs/revision_brief_v3.md`; specs in `docs/stage_specs_v3.md`. Stages 4 and 5 unchanged; Stage 3 only gets blue tears (recolour in editing); redo Stage 1 (bear climbs down and looks into the crib), Stage 2 (ball rolls out of the open door and does not return, no wink), Stage 6 (leaves outside only, old bear fully visible climbs out of the armchair slowly); combine the last two stages into one 16 s ending about the old bear (two 8 s clips sharing one frame). New total 60 s.
 - Note: the brief mentions a "coffee pot" falling in Scene 1; there is none, so it was read as the bear's flailing drop in the v2 clip.
+
+### 21:25 · Stage 3 blue tears (editing step, no generation)
+- `scripts/blue_tears.py` recolours only the near-black tear drops beside the lamp pole in frames 95-143 of the stage 3 clip to a soft muted blue (118,160,214); the rest of the frame is untouched. Output `exports/s03_v3_blue_silent.mp4`. Minor flaw: a few small blue specks at the floor splash spots in the last half second.

@@ -186,3 +186,7 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 - Method: both frames contain every object. `stills/B2_start.jpg` (cold, lamp asleep, door closed) edited from `hand_B`; `stills/B2_end.jpg` (door open, warm light, lamp lit) edited from the start frame. One Veo 3.1 Fast clip, 6 s, start and end frame, no audio, with a strict-continuity prompt (`docs/prompts/clip_B2.txt`). Cut on twos, silent: `exports/first6_B2_silent.mp4`.
 - Result (8 frames checked): cradle fixed at centre, bear seated, door visible throughout and opening, lamp asleep to awake to hop to glow, glow stays. Minor: the lamp briefly shows thin coil legs while hopping; the door surface turns orange from the light.
 - Cost: balance 60051 of 610,000 used (counter lags; about 4,000 for two stills and one Fast clip).
+
+### 20:35 · Stages 2-8: spec and helper written; seven subagents launched
+- Team liked `exports/first6_B2_silent.mp4` and asked for the other stages as separate 6 s videos (7 more, one subagent each; 48 s in total, valid for the kit's 30-90 s; stage lengths can be raised to 8 s later).
+- Wrote `docs/stage_specs.md` (common rules, recipe, and S2-S8 specs) and `scripts/el_do.py` (one-call still and clip generation). Each subagent makes its own start and end stills (edited from `stills/B2_end.jpg`), one Fast clip and a silent cut, with a 9,000-credit cap per stage, and does not touch git. Results are collected and committed by the main session.

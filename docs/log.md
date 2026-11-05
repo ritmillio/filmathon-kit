@@ -268,3 +268,10 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 
 ### 22:05 · Joining script and interim film v4
 - `scripts/make_film.py OUT.mp4` joins the scene clips with 0.5 s dissolves (the two ending clips joined hard) and falls back to the v3 clip for any missing v4 clip. Interim `exports/film_v4_silent.mp4` (57.0 s) built with stages 1, 3, 4, 5, 6 new and stage 2 and the ending from v3. Stages 1, 3, 4, 6 v4 clips are in; stage 2 v4 and the ending v4 were still running.
+
+### 22:07 · Film v4 (continuity pass) assembled: exports/film_v4_silent.mp4, 57.0 s, silent
+- All six v4 clips came back and passed my frame check: stage 1 (bear climbs down, straight to the crib, peeks in; no sparkles), stage 2 (soft bed entry, ball rolls out and is gone), stage 3 (plain-dot lamp, soft blue tears generated directly), stage 4 (the departing figure visible from the first frame), stage 6 (old bear gets up from the armchair and walks to the window), ending (the old bear settles, the goodnight reach toward the lamp, falls asleep, lamp out). Stage 5 unchanged. One armchair (right front corner) in every stage except 4.
+- Joined with 0.5 s dissolves by `scripts/make_film.py` (ending clips joined hard): 1920x1080, 24 fps, 57.0 s, no audio.
+- Known flaws: lamp pole bends or tilts in stages 2, 3, 4; the door swings wider than planned in stage 3 and stage 2; the bear looks a little bigger when it stretches toward the lamp.
+- Balance $N of 610,000 (counter lags). Web copy (30 MB) prepared; the team runs the deploy command to update the link.
+- Still open: audio track (the kit needs one; the team paused sound), the team name for the file, the final MP4 export.

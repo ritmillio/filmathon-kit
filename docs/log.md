@@ -299,3 +299,7 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 
 ### 22:39 · FINAL v7: title card "a lifetime in one little room"
 - Team asked whether "a lifetime" or "lifetime" makes sense; recommendation "a lifetime in one little room" (natural English). New black chalk card generated with `gpt-image-2.5-sunburst` via ElevenLabs (`docs/prompts/title_card_a.txt`, `stills/title_card_a_black.jpg`, spelling checked, pure black background). Final: `exports/final/teamname_alifetimeinonelittleroom.mp4` (60.5 s, 1920x1080, 24 fps, H.264 + AAC; film v6 + card + the team's music). The older `teamname_lifetimeinonelittleroom.mp4` stays in the same folder.
+
+### 22:42 · Final delivered to GitHub
+- Team confirmed `exports/final/teamname_alifetimeinonelittleroom.mp4` is the final and asked to push everything. Added `final/` (the film, 97.8 MB, just under GitHub's 100 MB file limit; the music track extracted without re-encoding; the title card; a README) with `git add -f`, because media is otherwise git-ignored. The roughly 5 GB of intermediate clips, stills and sound effects were deliberately not pushed (size, and the repo rule that media is not committed). All code, prompts, specs and this log are in git.
+- Still to do by the team: rename `teamname` to the real team name; confirm the music was generated in ElevenLabs; upload.

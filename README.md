@@ -6,6 +6,11 @@ It pairs an AI coding agent (Claude Code) with ElevenLabs for generation and FFm
 
 > Not affiliated with AI Budapest or ElevenLabs. Check the [official event page](https://ai-budapest.com/filmathon/) for the rules; they win over anything here.
 
+## The film and its prompts
+
+**Film:** `final/teamname_alifetimeinonelittleroom.mp4` ("a lifetime in one little room", 60.5 s).
+**Every prompt we used:** [docs/all-prompts.md](docs/all-prompts.md) - all 114 ElevenLabs generation prompts (by stage and version) plus the prompts we typed to Claude Code.
+
 ## The rules that shape everything
 
 | Rule | Value |

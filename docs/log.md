@@ -303,3 +303,6 @@ Newest entries at the bottom. Times are CET on Nov 5, 2026. Each entry says what
 ### 22:42 · Final delivered to GitHub
 - Team confirmed `exports/final/teamname_alifetimeinonelittleroom.mp4` is the final and asked to push everything. Added `final/` (the film, 97.8 MB, just under GitHub's 100 MB file limit; the music track extracted without re-encoding; the title card; a README) with `git add -f`, because media is otherwise git-ignored. The roughly 5 GB of intermediate clips, stills and sound effects were deliberately not pushed (size, and the repo rule that media is not committed). All code, prompts, specs and this log are in git.
 - Still to do by the team: rename `teamname` to the real team name; confirm the music was generated in ElevenLabs; upload.
+
+### 2026-11-06 · All prompts compiled
+- `docs/all-prompts.md`: the 114 generation prompts from `docs/prompts/` plus the team's typed Claude prompts from the three working sessions (continuation summaries and prompts naming other tools or real brands left out). Linked from the README next to the film.

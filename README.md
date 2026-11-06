@@ -8,9 +8,13 @@ It pairs an AI coding agent (Claude Code) with ElevenLabs for generation and FFm
 
 ## The film and its prompts
 
-<video src="https://github.com/ritmillio/filmathon-kit/raw/main/final/teamname_alifetimeinonelittleroom.mp4" controls muted width="100%"></video>
+[![Watch the film: a lifetime in one little room](final/poster.jpg)](https://ritmillio.github.io/filmathon-kit/)
 
-**Film:** "a lifetime in one little room", 60.5 s. If the player does not load, [open the MP4](https://github.com/ritmillio/filmathon-kit/blob/main/final/teamname_alifetimeinonelittleroom.mp4).
+**[▶ Watch the film](https://ritmillio.github.io/filmathon-kit/)**
+
+
+
+**Film:** "a lifetime in one little room", 60.5 s. Or [open the MP4 directly](https://github.com/ritmillio/filmathon-kit/blob/main/final/teamname_alifetimeinonelittleroom.mp4).
 **Every prompt we used:** [docs/all-prompts.md](docs/all-prompts.md) - all 114 ElevenLabs generation prompts (by stage and version) plus the prompts we typed to Claude Code.
 
 ## The rules that shape everything
